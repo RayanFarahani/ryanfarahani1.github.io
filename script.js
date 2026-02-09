@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const CAPTION_API_URL = 'https://ryanfafa-image-captioning-model.hf.space/caption';
 
     if (captionInput && captionBtn) {
-        // Show preview when an image is selected
         captionInput.addEventListener('change', () => {
             const file = captionInput.files[0];
             captionResult.textContent = '';
+            captionStatus.textContent = '';
             if (!file) {
                 captionPreview.style.display = 'none';
                 return;
@@ -89,16 +89,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: formData,
                 });
 
+                console.log('Response status:', resp.status);
+                const text = await resp.text();
+                console.log('Raw response:', text);
+
                 if (!resp.ok) {
-                    throw new Error(`HTTP ${resp.status}`);
+                    captionStatus.textContent = `Error: ${resp.status}`;
+                    return;
                 }
 
-                const data = await resp.json();
+                const data = JSON.parse(text);
                 captionResult.textContent = data.caption || '(No caption returned)';
                 captionStatus.textContent = '';
             } catch (err) {
                 console.error(err);
-                captionStatus.textContent = 'Error generating caption. Please try again.';
+                captionStatus.textContent = 'Error generating caption. Check console for details.';
             } finally {
                 captionBtn.disabled = false;
             }
