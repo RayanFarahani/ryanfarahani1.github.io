@@ -609,7 +609,7 @@
           </div>
           <p class="dm-upload-title">Drop your files here</p>
           <p class="dm-upload-sub">Up to 5 files &middot; PDF, TXT, DOCX, CSV, XLSX, JPG/PNG/WEBP</p>
-          <button class="dm-upload-btn" onclick="document.getElementById('dmFileInput').click()">
+          <button class="dm-upload-btn">
             <i class="fas fa-folder-open"></i> Browse Files
           </button>
         </div>
@@ -894,11 +894,19 @@
         var resp = await fetchWithTimeout(API_BASE + '/upload', {
           method: 'POST',
           body: formData
-        }, 60000);
+        }, 120000);
 
         if (!resp.ok) {
-          var detail = 'Upload failed';
-          try { var errData = await resp.json(); detail = errData.detail || detail; } catch (e) {}
+          var detail = 'Upload failed (HTTP ' + resp.status + ')';
+          try {
+            var respText = await resp.text();
+            try {
+              var errData = JSON.parse(respText);
+              detail = errData.detail || detail;
+            } catch (e2) {
+              if (respText && respText.length < 300) detail = respText;
+            }
+          } catch (e) {}
           throw new Error(file.name + ': ' + detail);
         }
 
@@ -977,7 +985,10 @@
     if (fileInput.files && fileInput.files.length) uploadDocuments(fileInput.files);
   });
 
-  uploadZone.addEventListener('click', function() { fileInput.click(); });
+  uploadZone.addEventListener('click', function(e) {
+    if (e.target === fileInput) return;
+    fileInput.click();
+  });
   uploadZone.addEventListener('dragover', function(e) {
     e.preventDefault();
     uploadZone.classList.add('dragover');
