@@ -759,7 +759,17 @@
 (function () {
   // ── Config ────────────────────────────────────────────────────────────
   var SPACE_ROOT = 'https://ryanfafa-docmind-ai.hf.space';
-  var API_BASE   = SPACE_ROOT + '/proxy/7861';
+
+  // Candidate API URLs — tried in order during discovery.
+  // HF Docker Spaces only expose port 7860; FastAPI on 7861 needs a proxy.
+  var API_CANDIDATES = [
+    SPACE_ROOT + '/api',                    // nginx reverse-proxy (if added)
+    SPACE_ROOT + '/_stcore/proxy/7861',     // newer Streamlit server proxy
+    SPACE_ROOT + '/proxy/7861',             // older Streamlit server proxy
+    SPACE_ROOT                              // fallback: direct (if Space is restructured)
+  ];
+
+  var API_BASE = null; // resolved at upload / query time
 
   // ── State ─────────────────────────────────────────────────────────────
   var documentLoaded = false;
@@ -842,13 +852,24 @@
     }
   }
 
-  async function checkApiAwake() {
-    try {
-      var resp = await fetchWithTimeout(API_BASE + '/health', {}, 8000);
-      return resp.ok;
-    } catch (e) {
-      return false;
+  // Probe each candidate URL; the real FastAPI returns {"status":"ok",...}
+  async function discoverApi() {
+    if (API_BASE) return API_BASE;
+
+    for (var i = 0; i < API_CANDIDATES.length; i++) {
+      var base = API_CANDIDATES[i];
+      try {
+        var resp = await fetchWithTimeout(base + '/health', {}, 6000);
+        if (!resp.ok) continue;
+        var data = await resp.json();
+        if (data && data.status === 'ok') {
+          API_BASE = base;
+          console.log('[DocMind] API found at', base);
+          return base;
+        }
+      } catch (e) { /* try next */ }
     }
+    return null;
   }
 
   // ── Upload documents (up to 5, additive) ──────────────────────────────
@@ -857,27 +878,32 @@
 
     var files = Array.prototype.slice.call(fileList, 0, 5);
 
-    setStatus('loading', 'Uploading & indexing...');
+    setStatus('loading', 'Connecting to API...');
     uploadZone.style.display = 'none';
     fileInfo.style.display   = 'flex';
     fileName.textContent     = files.length === 1 ? files[0].name : files.length + ' files selected';
-    fileChunks.textContent   = 'Indexing...';
+    fileChunks.textContent   = 'Connecting...';
 
-    var apiOk = await checkApiAwake();
-    if (!apiOk) {
+    var base = await discoverApi();
+    if (!base) {
       setStatus('error', 'API unreachable');
       fileChunks.textContent = '\u2717 API not responding';
       addMessage('error',
-        'Can\'t reach the API. Your Space may be sleeping or the API port isn\'t reachable.' +
+        'Can\'t reach the DocMind API. The HuggingFace Space may be sleeping or the API port (7861) isn\'t externally accessible.' +
         '<br><br>' +
-        '1) Open the Space directly to wake it: <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" style="color:#60a5fa;">DocMind AI on HuggingFace</a>' +
+        '<strong>To fix this</strong>, your HF Space needs an <strong>nginx reverse proxy</strong> to route <code>/api/</code> requests to FastAPI through port 7860.' +
+        '<br><br>' +
+        '1) <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" style="color:#60a5fa;">Open the Space</a> to wake it up, then refresh this page.' +
         '<br>' +
-        '2) Then refresh this page and try again.'
+        '2) If it still fails, the Space Dockerfile needs updating \u2014 see the README for instructions.'
       );
       uploadZone.style.display = 'block';
       fileInfo.style.display   = 'none';
       return;
     }
+
+    setStatus('loading', 'Uploading & indexing...');
+    fileChunks.textContent = 'Indexing...';
 
     var totalAddedChunks = 0;
     var loadedCount      = 0;
@@ -891,7 +917,7 @@
         var formData = new FormData();
         formData.append('file', file);
 
-        var resp = await fetchWithTimeout(API_BASE + '/upload', {
+        var resp = await fetchWithTimeout(base + '/upload', {
           method: 'POST',
           body: formData
         }, 120000);
@@ -912,8 +938,8 @@
 
         var data = await resp.json();
         totalAddedChunks += (data.chunks || 0);
-        loadedCount    = data.file_count    != null ? data.file_count    : loadedCount;
-        totalChunksAll = data.total_chunks  != null ? data.total_chunks  : totalChunksAll;
+        loadedCount    = data.file_count   != null ? data.file_count   : loadedCount;
+        totalChunksAll = data.total_chunks != null ? data.total_chunks : totalChunksAll;
       }
 
       fileChunks.textContent = '\u2713 Loaded ' + loadedCount + ' file(s) \u00b7 ' + totalChunksAll + ' total chunks';
@@ -949,8 +975,15 @@
     input.style.height = 'auto';
     setThinking(true);
 
+    var base = API_BASE;
+    if (!base) {
+      addMessage('error', 'API connection lost. Please re-upload your documents.');
+      setThinking(false);
+      return;
+    }
+
     try {
-      var resp = await fetchWithTimeout(API_BASE + '/query', {
+      var resp = await fetchWithTimeout(base + '/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: question })
@@ -1002,9 +1035,12 @@
   });
 
   fileRemove.addEventListener('click', async function() {
-    try { await fetchWithTimeout(API_BASE + '/reset', { method: 'POST' }, 20000); } catch (e) {}
+    if (API_BASE) {
+      try { await fetchWithTimeout(API_BASE + '/reset', { method: 'POST' }, 20000); } catch (e) {}
+    }
 
     documentLoaded = false;
+    API_BASE = null;
     fileInfo.style.display   = 'none';
     uploadZone.style.display = 'block';
     input.disabled           = true;
