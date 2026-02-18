@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Farahani — Data Analyst & AI Engineer</title>
-    <meta name="description" content="Data Analyst & AI Engineer specializing in Python, SQL, Power BI, and Machine Learning. Based in Sydney, Australia.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Farahani — Data Analyst & AI Engineer</title>
+  <meta name="description" content="Data Analyst & AI Engineer specializing in Python, SQL, Power BI, and Machine Learning. Based in Sydney, Australia.">
 
-    <!-- Prevent theme flash -->
-    <script>
-      (() => {
-        const saved = localStorage.getItem('theme');
-        if (saved) document.documentElement.setAttribute('data-theme', saved);
-      })();
-    </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -36,332 +28,332 @@
 
 <!-- ==================== NAVIGATION ==================== -->
 <nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <a href="#home" class="nav-logo">
-            <span class="logo-bracket">&lt;</span>Ryan<span class="logo-bracket">/&gt;</span>
-        </a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-            </button>
-            <a href="resume.pdf" class="nav-resume-btn" target="_blank" rel="noopener noreferrer">Resume</a>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>Ryan<span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+      <a href="resume.pdf" class="nav-resume-btn" target="_blank">Resume</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
     </div>
+  </div>
 </nav>
 
 <!-- ==================== HERO SECTION ==================== -->
 <section id="home" class="hero">
-    <div class="hero-bg-animation">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="floating-shape shape-4"></div>
-        <div class="floating-shape shape-5"></div>
-        <div class="grid-bg"></div>
+  <div class="hero-bg-animation">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+    <div class="floating-shape shape-4"></div>
+    <div class="floating-shape shape-5"></div>
+    <div class="grid-bg"></div>
+  </div>
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">
+        Hi, I'm <span class="gradient-text">Ryan Farahani</span>
+      </h1>
+      <div class="hero-title-wrapper">
+        <span class="hero-title-static">I'm a&nbsp;</span>
+        <span class="hero-title-typed" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-description">
+        Transforming raw data into actionable insights and intelligent solutions.
+        I bridge the gap between data analysis and AI engineering to solve
+        real-world business challenges.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <span>Let's Talk</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+      <div class="hero-social">
+        <a href="https://linkedin.com/in/ryan-farahanii" target="_blank" aria-label="LinkedIn" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/ryanfarahani1" target="_blank" aria-label="GitHub" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:Ryan.farahani97@gmail.com" aria-label="Email" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
     </div>
-    <div class="hero-container">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Available for opportunities
-            </div>
-            <h1 class="hero-name">
-                Hi, I'm <span class="gradient-text">Ryan Farahani</span>
-            </h1>
-            <div class="hero-title-wrapper">
-                <span class="hero-title-static">I'm a&nbsp;</span>
-                <span class="hero-title-typed" id="typedText"></span>
-                <span class="typed-cursor">|</span>
-            </div>
-            <p class="hero-description">
-                Transforming raw data into actionable insights and intelligent solutions.
-                I bridge the gap between data analysis and AI engineering to solve
-                real-world business challenges.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <span>View My Work</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#contact" class="btn btn-ghost">
-                    <span>Let's Talk</span>
-                    <i class="fas fa-paper-plane"></i>
-                </a>
-            </div>
-            <div class="hero-social">
-                <a href="https://linkedin.com/in/ryan-farahanii" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/ryanfarahani1" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:Ryan.farahani97@gmail.com" aria-label="Email" class="social-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrapper">
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <img src="images/profile1.jpg" alt="Ryan Farahani" class="hero-photo">
+        <div class="hero-floating-card card-1">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
         </div>
-        <div class="hero-visual">
-            <div class="hero-image-wrapper">
-                <div class="hero-image-ring"></div>
-                <div class="hero-image-ring ring-2"></div>
-                <img src="images/profile1.jpg" alt="Ryan Farahani" class="hero-photo">
-                <div class="hero-floating-card card-1">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="hero-floating-card card-2">
-                    <i class="fas fa-brain"></i>
-                    <span>AI/ML</span>
-                </div>
-                <div class="hero-floating-card card-3">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Analytics</span>
-                </div>
-            </div>
+        <div class="hero-floating-card card-2">
+          <i class="fas fa-brain"></i>
+          <span>AI/ML</span>
         </div>
+        <div class="hero-floating-card card-3">
+          <i class="fas fa-chart-line"></i>
+          <span>Analytics</span>
+        </div>
+      </div>
     </div>
-    <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
 
 <!-- ==================== STATS BAR ==================== -->
 <section class="stats-bar">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
-                <span class="stat-label">Projects Completed</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
-                <span class="stat-label">AI Models Deployed</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
-                <span class="stat-label">Dashboards Built</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
-                <span class="stat-label">Years Experience</span>
-            </div>
-        </div>
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">AI Models Deployed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Dashboards Built</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- ==================== ABOUT SECTION ==================== -->
 <section id="about" class="about">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-user"></i> Get to know me</span>
-            <h2 class="section-title">About Me</h2>
-        </div>
-        <div class="about-grid">
-            <div class="about-text-col">
-                <div class="about-text">
-                    <p class="about-lead">
-                        I'm a <strong>Data Analyst</strong> and <strong>AI Engineer</strong> based in
-                        Sydney, Australia, with a Master's in IT specializing in Artificial Intelligence.
-                    </p>
-                    <p>
-                        I specialize in extracting insights from complex datasets, building interactive
-                        dashboards, writing optimized SQL queries, and deploying AI/ML models that
-                        solve real business problems.
-                    </p>
-                    <p>
-                        I enjoy working with cross-functional teams to translate data into business
-                        strategies that drive measurable results. My approach combines analytical
-                        rigor with creative problem-solving.
-                    </p>
-                </div>
-                <div class="about-details">
-                    <div class="detail-card">
-                        <div class="detail-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <span class="detail-label">Location</span>
-                            <span class="detail-value">Sydney, Australia</span>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <div class="detail-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <span class="detail-label">Education</span>
-                            <span class="detail-value">Master of IT in AI</span>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <div class="detail-icon status-icon">
-                            <i class="fas fa-circle"></i>
-                        </div>
-                        <div>
-                            <span class="detail-label">Status</span>
-                            <span class="detail-value">Open to opportunities</span>
-                        </div>
-                    </div>
-                </div>
-                <a href="resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-download"></i>
-                    <span>Download Resume</span>
-                </a>
-            </div>
-            <div class="about-tech-col">
-                <div class="tech-orbit">
-                    <div class="orbit-center">
-                        <span>Core<br>Stack</span>
-                    </div>
-                    <div class="orbit-ring ring-1">
-                        <div class="orbit-item" style="--angle: 0deg;"><i class="fab fa-python"></i></div>
-                        <div class="orbit-item" style="--angle: 90deg;"><i class="fas fa-database"></i></div>
-                        <div class="orbit-item" style="--angle: 180deg;"><i class="fas fa-chart-bar"></i></div>
-                        <div class="orbit-item" style="--angle: 270deg;"><i class="fas fa-robot"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"><i class="fas fa-user"></i> Get to know me</span>
+      <h2 class="section-title">About Me</h2>
     </div>
+    <div class="about-grid">
+      <div class="about-text-col">
+        <div class="about-text">
+          <p class="about-lead">
+            I'm a <strong>Data Analyst</strong> and <strong>AI Engineer</strong> based in
+            Sydney, Australia, with a Master's in IT specializing in Artificial Intelligence.
+          </p>
+          <p>
+            I specialize in extracting insights from complex datasets, building interactive
+            dashboards, writing optimized SQL queries, and deploying AI/ML models that
+            solve real business problems.
+          </p>
+          <p>
+            I enjoy working with cross-functional teams to translate data into business
+            strategies that drive measurable results. My approach combines analytical
+            rigor with creative problem-solving.
+          </p>
+        </div>
+        <div class="about-details">
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Sydney, Australia</span>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div>
+              <span class="detail-label">Education</span>
+              <span class="detail-value">Master of IT in AI</span>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon status-icon">
+              <i class="fas fa-circle"></i>
+            </div>
+            <div>
+              <span class="detail-label">Status</span>
+              <span class="detail-value">Open to opportunities</span>
+            </div>
+          </div>
+        </div>
+        <a href="resume.pdf" class="btn btn-primary" target="_blank">
+          <i class="fas fa-download"></i>
+          <span>Download Resume</span>
+        </a>
+      </div>
+      <div class="about-tech-col">
+        <div class="tech-orbit">
+          <div class="orbit-center">
+            <span>Core<br>Stack</span>
+          </div>
+          <div class="orbit-ring ring-1">
+            <div class="orbit-item" style="--angle: 0deg;"><i class="fab fa-python"></i></div>
+            <div class="orbit-item" style="--angle: 90deg;"><i class="fas fa-database"></i></div>
+            <div class="orbit-item" style="--angle: 180deg;"><i class="fas fa-chart-bar"></i></div>
+            <div class="orbit-item" style="--angle: 270deg;"><i class="fas fa-robot"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ==================== SKILLS SECTION ==================== -->
 <section id="skills" class="skills">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-code"></i> What I use</span>
-            <h2 class="section-title">Skills & Tools</h2>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card" data-color="blue">
-                <div class="skill-card-header">
-                    <div class="skill-icon-wrapper blue">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python</h3>
-                </div>
-                <p class="skill-description">Data analysis, automation, and ML model development</p>
-                <div class="skill-tags">
-                    <span>Pandas</span>
-                    <span>NumPy</span>
-                    <span>Matplotlib</span>
-                    <span>Seaborn</span>
-                    <span>Plotly</span>
-                    <span>Scikit-learn</span>
-                    <span>Streamlit</span>
-                </div>
-                <div class="skill-level">
-                    <div class="skill-level-bar" data-width="92"></div>
-                </div>
-            </div>
-
-            <div class="skill-card" data-color="green">
-                <div class="skill-card-header">
-                    <div class="skill-icon-wrapper green">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>SQL</h3>
-                </div>
-                <p class="skill-description">Database design, complex queries, and data pipelines</p>
-                <div class="skill-tags">
-                    <span>PostgreSQL</span>
-                    <span>MySQL</span>
-                    <span>SQL Server</span>
-                    <span>CTEs</span>
-                    <span>Window Functions</span>
-                    <span>Stored Procedures</span>
-                </div>
-                <div class="skill-level">
-                    <div class="skill-level-bar" data-width="88"></div>
-                </div>
-            </div>
-
-            <div class="skill-card" data-color="amber">
-                <div class="skill-card-header">
-                    <div class="skill-icon-wrapper amber">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Power BI</h3>
-                </div>
-                <p class="skill-description">Interactive dashboards, data modeling, and business intelligence</p>
-                <div class="skill-tags">
-                    <span>DAX</span>
-                    <span>Power Query</span>
-                    <span>Data Modeling</span>
-                    <span>Interactive Dashboards</span>
-                    <span>Report Design</span>
-                </div>
-                <div class="skill-level">
-                    <div class="skill-level-bar" data-width="85"></div>
-                </div>
-            </div>
-
-            <div class="skill-card" data-color="purple">
-                <div class="skill-card-header">
-                    <div class="skill-icon-wrapper purple">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI / ML</h3>
-                </div>
-                <p class="skill-description">Deep learning, NLP, computer vision, and LLM applications</p>
-                <div class="skill-tags">
-                    <span>TensorFlow</span>
-                    <span>PyTorch</span>
-                    <span>NLP</span>
-                    <span>Computer Vision</span>
-                    <span>LLMs</span>
-                    <span>HuggingFace</span>
-                    <span>LangChain</span>
-                </div>
-                <div class="skill-level">
-                    <div class="skill-level-bar" data-width="90"></div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"><i class="fas fa-code"></i> What I use</span>
+      <h2 class="section-title">Skills & Tools</h2>
     </div>
+    <div class="skills-grid">
+      <div class="skill-card" data-color="blue">
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper blue">
+            <i class="fab fa-python"></i>
+          </div>
+          <h3>Python</h3>
+        </div>
+        <p class="skill-description">Data analysis, automation, and ML model development</p>
+        <div class="skill-tags">
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Matplotlib</span>
+          <span>Seaborn</span>
+          <span>Plotly</span>
+          <span>Scikit-learn</span>
+          <span>Streamlit</span>
+        </div>
+        <div class="skill-level">
+          <div class="skill-level-bar" data-width="92"></div>
+        </div>
+      </div>
+
+      <div class="skill-card" data-color="green">
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper green">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>SQL</h3>
+        </div>
+        <p class="skill-description">Database design, complex queries, and data pipelines</p>
+        <div class="skill-tags">
+          <span>PostgreSQL</span>
+          <span>MySQL</span>
+          <span>SQL Server</span>
+          <span>CTEs</span>
+          <span>Window Functions</span>
+          <span>Stored Procedures</span>
+        </div>
+        <div class="skill-level">
+          <div class="skill-level-bar" data-width="88"></div>
+        </div>
+      </div>
+
+      <div class="skill-card" data-color="amber">
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper amber">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3>Power BI</h3>
+        </div>
+        <p class="skill-description">Interactive dashboards, data modeling, and business intelligence</p>
+        <div class="skill-tags">
+          <span>DAX</span>
+          <span>Power Query</span>
+          <span>Data Modeling</span>
+          <span>Interactive Dashboards</span>
+          <span>Report Design</span>
+        </div>
+        <div class="skill-level">
+          <div class="skill-level-bar" data-width="85"></div>
+        </div>
+      </div>
+
+      <div class="skill-card" data-color="purple">
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper purple">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>AI / ML</h3>
+        </div>
+        <p class="skill-description">Deep learning, NLP, computer vision, and LLM applications</p>
+        <div class="skill-tags">
+          <span>TensorFlow</span>
+          <span>PyTorch</span>
+          <span>NLP</span>
+          <span>Computer Vision</span>
+          <span>LLMs</span>
+          <span>HuggingFace</span>
+          <span>LangChain</span>
+        </div>
+        <div class="skill-level">
+          <div class="skill-level-bar" data-width="90"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ==================== PROJECTS SECTION ==================== -->
 <section id="projects" class="projects">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-folder-open"></i> My work</span>
-            <h2 class="section-title">Featured Projects</h2>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"><i class="fas fa-folder-open"></i> My work</span>
+      <h2 class="section-title">Featured Projects</h2>
+    </div>
 
-        <!-- Filter Buttons -->
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">
-                <i class="fas fa-layer-group"></i> All
-            </button>
-            <button class="filter-btn" data-filter="python">
-                <i class="fab fa-python"></i> Python
-            </button>
-            <button class="filter-btn" data-filter="sql">
-                <i class="fas fa-database"></i> SQL
-            </button>
-            <button class="filter-btn" data-filter="powerbi">
-                <i class="fas fa-chart-bar"></i> Power BI
-            </button>
-            <button class="filter-btn" data-filter="ai">
-                <i class="fas fa-robot"></i> AI / ML
-            </button>
-        </div>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-layer-group"></i> All
+      </button>
+      <button class="filter-btn" data-filter="python">
+        <i class="fab fa-python"></i> Python
+      </button>
+      <button class="filter-btn" data-filter="sql">
+        <i class="fas fa-database"></i> SQL
+      </button>
+      <button class="filter-btn" data-filter="powerbi">
+        <i class="fas fa-chart-bar"></i> Power BI
+      </button>
+      <button class="filter-btn" data-filter="ai">
+        <i class="fas fa-robot"></i> AI / ML
+      </button>
+    </div>
+
 
         <div class="projects-grid">
 
@@ -545,39 +537,38 @@
     </div>
 </section>
 
-<!-- Demo 7: AI -->
+<!-- Demo 7: Image Captioning -->
 <section id="image-captioning" class="projects">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-image"></i> Live AI Demo</span>
-            <h2 class="section-title">Image Captioning Model</h2>
-            <p class="section-subtitle">
-                Upload an image and see the caption generated by my EfficientNet-B0 + GPT-2 model
-                deployed on Hugging Face Spaces.
-            </p>
-        </div>
-
-        <div class="project-card" style="max-width: 600px; margin: 0 auto;">
-            <div class="project-image" style="height:auto;">
-                <input type="file" id="captionImageInput" accept="image/*" style="margin:16px 0;">
-                <img id="captionImagePreview" alt="Selected image preview" style="display:none; margin-top:12px;">
-            </div>
-            <div class="project-info">
-                <button class="btn btn-primary" id="captionSubmitBtn">
-                    <span>Generate Caption</span>
-                    <i class="fas fa-magic"></i>
-                </button>
-                <p id="captionStatus" style="margin-top:12px; font-size:0.9rem; color:var(--text-tertiary);"></p>
-                <p id="captionResult" style="margin-top:8px; font-weight:600;"></p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"><i class="fas fa-image"></i> Live AI Demo</span>
+      <h2 class="section-title">Image Captioning Model</h2>
+      <p class="section-subtitle">
+        Upload an image and see the caption generated by my EfficientNet-B0 + GPT-2 model
+        deployed on Hugging Face Spaces.
+      </p>
     </div>
+
+    <div class="project-card" style="max-width: 600px; margin: 0 auto;">
+      <div class="project-image" style="height:auto;">
+        <input type="file" id="captionImageInput" accept="image/*" style="margin:16px 0;">
+        <img id="captionImagePreview" alt="Selected image preview" style="display:none; margin-top:12px;">
+      </div>
+      <div class="project-info">
+        <button class="btn btn-primary" id="captionSubmitBtn">
+          <span>Generate Caption</span>
+          <i class="fas fa-magic"></i>
+        </button>
+        <p id="captionStatus" style="margin-top:12px; font-size:0.9rem; color:var(--text-tertiary);"></p>
+        <p id="captionResult" style="margin-top:8px; font-weight:600;"></p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ==================== DOCMIND AI — NATIVE CHAT DEMO ==================== -->
 <section id="demo" class="docmind-section">
 
-  <!-- Ambient background -->
   <div class="dm-bg">
     <div class="dm-orb dm-orb-1"></div>
     <div class="dm-orb dm-orb-2"></div>
@@ -587,78 +578,64 @@
 
   <div class="container" style="position:relative;z-index:1;">
 
-    <!-- Section header -->
     <div class="section-header reveal">
       <span class="section-tag light"><i class="fas fa-brain"></i> Live AI Demo</span>
       <h2 class="section-title light">DocMind AI</h2>
       <p class="section-subtitle">
-        Upload up to <strong>5 files</strong> (PDF, TXT, DOC/DOCX, CSV, XLS/XLSX, JPG/PNG/WEBP)
-        and chat with them — powered by RAG, ChromaDB, and Mistral-7B. Running live on Hugging Face.
+        Upload up to 5 files (PDF, TXT, DOCX, CSV, XLSX, images) and chat with your documents —
+        powered by RAG, ChromaDB, and Mistral-7B. Running live on Hugging Face.
       </p>
     </div>
 
-    <!-- Main demo card -->
     <div class="dm-card">
 
-      <!-- Left panel: info + upload -->
+      <!-- Left panel -->
       <div class="dm-panel dm-left">
 
-        <!-- Status indicator -->
         <div class="dm-status" id="dmStatus">
           <span class="dm-status-dot idle"></span>
-          <span class="dm-status-text">No documents loaded</span>
+          <span class="dm-status-text">No document loaded</span>
         </div>
 
-        <!-- Upload zone (stays visible even after loading docs) -->
         <div class="dm-upload-zone" id="dmUploadZone">
+          <!-- ✅ FIX: multiple + all supported file types -->
           <input
             type="file"
             id="dmFileInput"
-            accept=".pdf,.txt,.doc,.docx,.csv,.xls,.xlsx,.jpg,.jpeg,.png,.webp"
+            accept=".pdf,.txt,.doc,.docx,.csv,.xlsx,.xls,.jpg,.jpeg,.png,.webp"
             multiple
             hidden
           >
           <div class="dm-upload-icon">
             <i class="fas fa-cloud-upload-alt"></i>
           </div>
-          <p class="dm-upload-title">Drop files here</p>
-          <p class="dm-upload-sub">Up to 5 files · Max 10MB each</p>
-          <button class="dm-upload-btn" type="button" onclick="document.getElementById('dmFileInput').click()">
+          <p class="dm-upload-title">Drop your files here</p>
+          <p class="dm-upload-sub">Up to 5 files · PDF, TXT, DOCX, CSV, XLSX, JPG/PNG/WEBP</p>
+          <button class="dm-upload-btn" onclick="document.getElementById('dmFileInput').click()">
             <i class="fas fa-folder-open"></i> Browse Files
           </button>
         </div>
 
-        <!-- Loaded docs panel -->
-        <div id="dmFilesPanel" style="display:none;">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;">
-            <div style="font-size:0.78rem;font-weight:700;color:#e2e8f0;">Loaded files</div>
-            <button class="dm-upload-btn" id="dmClearAllBtn" type="button" title="Clear all documents and memory">
-              <i class="fas fa-trash"></i> Clear all
-            </button>
+        <div class="dm-file-info" id="dmFileInfo" style="display:none;">
+          <div class="dm-file-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="dm-file-details">
+            <span class="dm-file-name" id="dmFileName">documents</span>
+            <span class="dm-file-chunks" id="dmFileChunks">Indexing...</span>
           </div>
-
-          <div id="dmFileList" style="display:flex;flex-direction:column;gap:10px;margin-top:10px;"></div>
-
-          <div id="dmFilesMeta" style="margin-top:10px;font-size:0.72rem;color:#475569;font-weight:600;"></div>
-
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
-            <button class="dm-upload-btn" id="dmClearMemoryBtn" type="button" title="Clear conversation history only">
-              <i class="fas fa-eraser"></i> Clear chat memory
-            </button>
-          </div>
+          <button class="dm-file-remove" id="dmFileRemove" title="Remove document(s)">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
 
-        <!-- OR divider -->
         <div class="dm-or">
           <span>or try a sample question</span>
         </div>
 
-        <!-- Sample questions -->
         <div class="dm-samples">
-          <button class="dm-sample-btn" data-q="What are the main topics covered across these documents?">
+          <button class="dm-sample-btn" data-q="What are the main topics covered in these documents?">
             <i class="fas fa-list"></i> Main topics
           </button>
-          <button class="dm-sample-btn" data-q="Summarize the key findings or conclusions across the documents.">
+          <button class="dm-sample-btn" data-q="Summarize the key findings or conclusions.">
             <i class="fas fa-compress-alt"></i> Summarize
           </button>
           <button class="dm-sample-btn" data-q="What recommendations are made?">
@@ -669,7 +646,6 @@
           </button>
         </div>
 
-        <!-- Tech stack -->
         <div class="dm-tech">
           <span class="dm-tech-label">Powered by</span>
           <div class="dm-tech-pills">
@@ -681,41 +657,48 @@
           </div>
         </div>
 
-        <!-- External link -->
-        <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" rel="noopener noreferrer" class="dm-external-link">
+        <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" class="dm-external-link">
           <i class="fas fa-external-link-alt"></i>
           Open full app on HuggingFace
         </a>
 
       </div>
 
-      <!-- Right panel: chat -->
+      <!-- Right panel -->
       <div class="dm-panel dm-right">
 
-        <!-- Chat header -->
         <div class="dm-chat-header">
           <div class="dm-chat-avatar">
             <i class="fas fa-brain"></i>
           </div>
           <div>
             <div class="dm-chat-name">DocMind AI</div>
-            <div class="dm-chat-sub" id="dmChatSub">Upload files to begin</div>
+            <div class="dm-chat-sub" id="dmChatSub">Ready to analyze your documents</div>
           </div>
           <div class="dm-thinking" id="dmThinking">
             <span></span><span></span><span></span>
           </div>
         </div>
 
-        <!-- Messages -->
-        <div class="dm-messages" id="dmMessages"></div>
+        <div class="dm-messages" id="dmMessages">
+          <div class="dm-msg dm-msg-ai">
+            <div class="dm-msg-avatar"><i class="fas fa-brain"></i></div>
+            <div class="dm-msg-content">
+              <div class="dm-msg-bubble">
+                👋 Hi! I'm <strong>DocMind AI</strong> — a RAG-powered assistant built by Ryan.<br><br>
+                Upload up to <strong>5 files</strong> (PDF/TXT/DOCX/CSV/XLSX/images) on the left, then ask me anything.
+              </div>
+              <div class="dm-msg-meta">DocMind AI · Just now</div>
+            </div>
+          </div>
+        </div>
 
-        <!-- Input area -->
         <div class="dm-input-area">
           <div class="dm-input-wrap">
             <textarea
               id="dmInput"
               class="dm-input"
-              placeholder="Upload files first, then ask anything..."
+              placeholder="Upload documents first, then ask anything..."
               rows="1"
               disabled
             ></textarea>
@@ -724,14 +707,13 @@
             </button>
           </div>
           <div class="dm-input-hint">
-            <i class="fas fa-shield-alt"></i> Answers use retrieval across your uploaded files
+            <i class="fas fa-shield-alt"></i> Answers are grounded in your documents only
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- Stats row below card -->
     <div class="dm-stats-row">
       <div class="dm-stat-item">
         <i class="fas fa-layer-group"></i>
@@ -765,64 +747,37 @@
 
 <!-- ==================== DOCMIND JS ==================== -->
 <script>
-(async function() {
-  // ── API base auto-detect ──────────────────────────────────────────────
-  // Your FastAPI runs on port 7861. HF often exposes it via a "-api" subdomain.
-  const API_BASE_CANDIDATES = [
-    'https://ryanfafa-docmind-ai-api.hf.space',
-    'https://ryanfafa-docmind-ai.hf.space',
-  ];
+(function () {
+  /**
+   * ✅ IMPORTANT:
+   * Your FastAPI runs on port 7861 (Dockerfile runs uvicorn on 7861). :contentReference[oaicite:3]{index=3}
+   * Your API routes are /upload, /query, /reset, /documents, /health, etc. :contentReference[oaicite:4]{index=4}
+   *
+   * HF usually exposes one port publicly, but allows proxying other ports via /proxy/<port>.
+   * So we target the API through:
+   *   https://<space>.hf.space/proxy/7861
+   */
+  const SPACE_ROOT = 'https://ryanfafa-docmind-ai.hf.space';
+  const API_BASE = SPACE_ROOT + '/proxy/7861';
 
-  let API_BASE = API_BASE_CANDIDATES[0];
-
-  async function resolveApiBase() {
-    for (const base of API_BASE_CANDIDATES) {
-      try {
-        const r = await fetch(base + '/health', { cache: 'no-store' });
-        if (r.ok) {
-          API_BASE = base;
-          return;
-        }
-      } catch {}
-    }
-  }
-
-  await resolveApiBase();
-
-  // ── Limits (match your HF backend expectations) ───────────────────────
-  const MAX_FILES = 5;
-  const MAX_MB = 10;
-  const MAX_BYTES = MAX_MB * 1024 * 1024;
-
-  const SUPPORTED_EXT = new Set([
-    '.pdf','.txt','.doc','.docx','.csv','.xls','.xlsx','.jpg','.jpeg','.png','.webp'
-  ]);
-
-  // ── State ─────────────────────────────────────────────────────────────
   let documentLoaded = false;
   let isThinking = false;
 
-  // ── Elements ──────────────────────────────────────────────────────────
-  const fileInput      = document.getElementById('dmFileInput');
-  const uploadZone     = document.getElementById('dmUploadZone');
+  const fileInput  = document.getElementById('dmFileInput');
+  const uploadZone = document.getElementById('dmUploadZone');
+  const fileInfo   = document.getElementById('dmFileInfo');
+  const fileName   = document.getElementById('dmFileName');
+  const fileChunks = document.getElementById('dmFileChunks');
+  const fileRemove = document.getElementById('dmFileRemove');
+  const statusDot  = document.querySelector('.dm-status-dot');
+  const statusText = document.querySelector('.dm-status-text');
+  const messages   = document.getElementById('dmMessages');
+  const input      = document.getElementById('dmInput');
+  const sendBtn    = document.getElementById('dmSendBtn');
+  const thinking   = document.getElementById('dmThinking');
+  const chatSub    = document.getElementById('dmChatSub');
+  const sampleBtns = document.querySelectorAll('.dm-sample-btn');
 
-  const statusDot      = document.querySelector('.dm-status-dot');
-  const statusText     = document.querySelector('.dm-status-text');
-
-  const filesPanel     = document.getElementById('dmFilesPanel');
-  const fileListEl     = document.getElementById('dmFileList');
-  const filesMeta      = document.getElementById('dmFilesMeta');
-  const clearAllBtn    = document.getElementById('dmClearAllBtn');
-  const clearMemoryBtn = document.getElementById('dmClearMemoryBtn');
-
-  const messages       = document.getElementById('dmMessages');
-  const input          = document.getElementById('dmInput');
-  const sendBtn        = document.getElementById('dmSendBtn');
-  const thinking       = document.getElementById('dmThinking');
-  const chatSub        = document.getElementById('dmChatSub');
-  const sampleBtns     = document.querySelectorAll('.dm-sample-btn');
-
-  // ── Status helpers ────────────────────────────────────────────────────
   function setStatus(state, text) {
     statusDot.className = 'dm-status-dot ' + state;
     statusText.textContent = text;
@@ -835,23 +790,10 @@
     input.disabled = active || !documentLoaded;
     chatSub.textContent = active
       ? 'Thinking...'
-      : (documentLoaded ? 'Documents loaded · Ask anything' : 'Upload files to begin');
+      : (documentLoaded ? 'Documents loaded · Ask anything' : 'Ready to analyze your documents');
   }
 
-  function setDocLoaded(loaded) {
-    documentLoaded = loaded;
-    input.disabled = !loaded || isThinking;
-    sendBtn.disabled = !loaded || isThinking;
-    sampleBtns.forEach(b => b.disabled = !loaded || isThinking);
-    input.placeholder = loaded
-      ? 'Ask anything about your uploaded files...'
-      : 'Upload files first, then ask anything...';
-    chatSub.textContent = loaded ? 'Documents loaded · Ask anything' : 'Upload files to begin';
-  }
-
-  // ── Safe message builder (prevents XSS) ────────────────────────────────
-  function addMessage(role, content, sources = [], opts = {}) {
-    const { trustedHtml = false } = opts;
+  function addMessage(role, content, sources = []) {
     const isAI = role === 'ai';
     const isError = role === 'error';
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -859,228 +801,135 @@
     const msgEl = document.createElement('div');
     msgEl.className = 'dm-msg dm-msg-' + (isAI || isError ? 'ai' : 'user') + (isError ? ' dm-msg-error' : '');
 
-    const avatar = document.createElement('div');
-    avatar.className = 'dm-msg-avatar';
+    const avatarIcon = isAI || isError ? 'fa-brain' : 'fa-user';
+    const authorLabel = isAI ? 'DocMind AI' : isError ? 'Error' : 'You';
 
-    if (isAI || isError) {
-      avatar.innerHTML = '<i class="fas fa-brain"></i>';
-    } else {
-      // keep your existing CSS pseudo-icon behavior
-      avatar.innerHTML = '';
+    let sourcesHTML = '';
+    if (sources.length > 0) {
+      sourcesHTML = '<div class="dm-sources">' +
+        sources.map(s => `<span class="dm-source-pill"><i class="fas fa-file-alt"></i>${s}</span>`).join('') +
+        '</div>';
     }
 
-    const contentWrap = document.createElement('div');
-    contentWrap.className = 'dm-msg-content';
+    msgEl.innerHTML = `
+      <div class="dm-msg-avatar"><i class="fas ${avatarIcon}"></i></div>
+      <div class="dm-msg-content">
+        <div class="dm-msg-bubble">${content}</div>
+        ${sourcesHTML}
+        <div class="dm-msg-meta">${authorLabel} · ${time}</div>
+      </div>
+    `;
 
-    const bubble = document.createElement('div');
-    bubble.className = 'dm-msg-bubble';
-
-    if (trustedHtml) bubble.innerHTML = content;
-    else bubble.textContent = content;
-
-    contentWrap.appendChild(bubble);
-
-    if (sources && sources.length) {
-      const sourcesWrap = document.createElement('div');
-      sourcesWrap.className = 'dm-sources';
-      sources.forEach(s => {
-        const pill = document.createElement('span');
-        pill.className = 'dm-source-pill';
-        const icon = document.createElement('i');
-        icon.className = 'fas fa-file-alt';
-        pill.appendChild(icon);
-        pill.appendChild(document.createTextNode(' ' + s));
-        sourcesWrap.appendChild(pill);
-      });
-      contentWrap.appendChild(sourcesWrap);
-    }
-
-    const meta = document.createElement('div');
-    meta.className = 'dm-msg-meta';
-    meta.textContent = `${isAI ? 'DocMind AI' : isError ? 'Error' : 'You'} · ${time}`;
-    contentWrap.appendChild(meta);
-
-    msgEl.appendChild(avatar);
-    msgEl.appendChild(contentWrap);
     messages.appendChild(msgEl);
     messages.scrollTop = messages.scrollHeight;
-
     return msgEl;
   }
 
-  // Add initial welcome message (trusted HTML)
-  addMessage('ai',
-    `👋 Hi! I'm <strong>DocMind AI</strong> — a RAG-powered assistant built by Ryan.<br><br>
-     Upload up to <strong>${MAX_FILES}</strong> files on the left (PDF, TXT, DOC/DOCX, CSV, XLS/XLSX, JPG/PNG/WEBP), then ask me anything.`,
-    [],
-    { trustedHtml: true }
-  );
-
-  // ── Documents UI ──────────────────────────────────────────────────────
-  function extOf(name) {
-    const idx = name.lastIndexOf('.');
-    return idx >= 0 ? name.slice(idx).toLowerCase() : '';
-  }
-
-  function renderDocuments(docsPayload) {
-    const docs = docsPayload?.documents || [];
-    const total = docsPayload?.file_count ?? docs.length;
-    const max = docsPayload?.max_files ?? MAX_FILES;
-    const totalChunks = docsPayload?.total_chunks ?? 0;
-
-    if (total > 0) {
-      filesPanel.style.display = 'block';
-      setStatus('ready', `${total}/${max} files loaded`);
-      setDocLoaded(true);
-    } else {
-      filesPanel.style.display = 'none';
-      setStatus('idle', 'No documents loaded');
-      setDocLoaded(false);
-    }
-
-    fileListEl.innerHTML = '';
-    docs.forEach(d => {
-      const row = document.createElement('div');
-      row.className = 'dm-file-info';
-
-      const icon = document.createElement('div');
-      icon.className = 'dm-file-icon';
-      icon.innerHTML = '<i class="fas fa-file-alt"></i>';
-
-      const details = document.createElement('div');
-      details.className = 'dm-file-details';
-
-      const nameEl = document.createElement('span');
-      nameEl.className = 'dm-file-name';
-      nameEl.title = d.name;
-      nameEl.textContent = d.name;
-
-      const chunksEl = document.createElement('span');
-      chunksEl.className = 'dm-file-chunks';
-      chunksEl.textContent = `✓ ${d.chunk_count} chunks · ${d.file_type}`;
-
-      details.appendChild(nameEl);
-      details.appendChild(chunksEl);
-
-      const removeBtn = document.createElement('button');
-      removeBtn.className = 'dm-file-remove';
-      removeBtn.type = 'button';
-      removeBtn.title = `Remove ${d.name}`;
-      removeBtn.innerHTML = '<i class="fas fa-times"></i>';
-
-      removeBtn.addEventListener('click', async () => {
-        if (isThinking) return;
-        try {
-          setStatus('loading', 'Removing...');
-          const resp = await fetch(API_BASE + '/documents/' + encodeURIComponent(d.name), { method: 'DELETE' });
-          if (!resp.ok) {
-            const err = await resp.json().catch(() => ({}));
-            throw new Error(err.detail || 'Failed to remove document');
-          }
-          addMessage('ai', `Removed: ${d.name}`);
-        } catch (e) {
-          addMessage('error', `Remove failed: ${e.message}`);
-        } finally {
-          await refreshDocuments();
-        }
-      });
-
-      row.appendChild(icon);
-      row.appendChild(details);
-      row.appendChild(removeBtn);
-
-      fileListEl.appendChild(row);
-    });
-
-    filesMeta.textContent = `Total chunks: ${totalChunks}`;
-  }
-
-  async function refreshDocuments() {
+  async function fetchWithTimeout(url, opts = {}, timeoutMs = 12000) {
+    const controller = new AbortController();
+    const t = setTimeout(() => controller.abort(), timeoutMs);
     try {
-      const r = await fetch(API_BASE + '/documents', { cache: 'no-store' });
-      if (!r.ok) throw new Error('Failed to fetch documents');
-      const data = await r.json();
-      renderDocuments(data);
-      return data;
-    } catch (e) {
-      // If API base is wrong or the Space is asleep, show a clear error state.
+      const resp = await fetch(url, { ...opts, signal: controller.signal });
+      return resp;
+    } finally {
+      clearTimeout(t);
+    }
+  }
+
+  async function checkApiAwake() {
+    try {
+      const resp = await fetchWithTimeout(API_BASE + '/health', {}, 8000);
+      return resp.ok;
+    } catch {
+      return false;
+    }
+  }
+
+  async function uploadDocuments(fileList) {
+    if (!fileList || fileList.length === 0) return;
+
+    const files = Array.from(fileList).slice(0, 5);
+
+    setStatus('loading', 'Uploading & indexing...');
+    uploadZone.style.display = 'none';
+    fileInfo.style.display = 'flex';
+    fileName.textContent = files.length === 1 ? files[0].name : `${files.length} files selected`;
+    fileChunks.textContent = 'Indexing...';
+
+    const apiOk = await checkApiAwake();
+    if (!apiOk) {
       setStatus('error', 'API unreachable');
-      setDocLoaded(false);
-      filesPanel.style.display = 'none';
+      fileChunks.textContent = '✗ API not responding';
       addMessage(
         'error',
-        `Can't reach the API. Open the Hugging Face Space to wake it up, then try again.`
+        `Can’t reach the API. Your Space may be sleeping or the API port isn’t reachable.
+        <br><br>
+        1) Open the Space directly to wake it: <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" style="color:#60a5fa;">DocMind AI on HuggingFace</a>
+        <br>
+        2) Then refresh this page and try again.`
       );
-      return null;
-    }
-  }
-
-  // ── Upload (multi-file, additive, up to 5) ────────────────────────────
-  async function uploadOne(file) {
-    const formData = new FormData();
-    formData.append('file', file);
-
-    const resp = await fetch(API_BASE + '/upload', {
-      method: 'POST',
-      body: formData
-    });
-
-    if (!resp.ok) {
-      const err = await resp.json().catch(() => ({}));
-      throw new Error(err.detail || 'Upload failed');
-    }
-
-    return await resp.json();
-  }
-
-  async function handleFiles(fileList) {
-    const files = Array.from(fileList || []);
-    if (!files.length) return;
-
-    const current = await refreshDocuments();
-    const currentCount = current?.file_count ?? 0;
-    const remaining = Math.max(0, MAX_FILES - currentCount);
-
-    if (remaining === 0) {
-      addMessage('error', `You already have ${MAX_FILES} files loaded. Remove one to upload more.`);
+      uploadZone.style.display = 'block';
+      fileInfo.style.display = 'none';
       return;
     }
 
-    const selected = files.slice(0, remaining);
+    let totalAddedChunks = 0;
+    let loadedCount = 0;
+    let totalChunksAll = 0;
 
-    // Validate client-side (backend will validate too)
-    const rejected = [];
-    const accepted = [];
+    try {
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        fileChunks.textContent = `Uploading ${i + 1}/${files.length}: ${file.name}`;
 
-    for (const f of selected) {
-      const ext = extOf(f.name);
-      if (f.size > MAX_BYTES) rejected.push(`${f.name} (over ${MAX_MB}MB)`);
-      else if (!SUPPORTED_EXT.has(ext)) rejected.push(`${f.name} (unsupported type)`);
-      else accepted.push(f);
-    }
+        const formData = new FormData();
+        formData.append('file', file);
 
-    if (rejected.length) {
-      addMessage('error', `Skipped:\n- ${rejected.join('\n- ')}`);
-    }
+        const resp = await fetchWithTimeout(API_BASE + '/upload', {
+          method: 'POST',
+          body: formData
+        }, 60000);
 
-    if (!accepted.length) return;
+        if (!resp.ok) {
+          let detail = 'Upload failed';
+          try {
+            const err = await resp.json();
+            detail = err.detail || detail;
+          } catch {}
+          throw new Error(`${file.name}: ${detail}`);
+        }
 
-    setStatus('loading', 'Uploading & indexing...');
-
-    // Upload sequentially (keeps server happy + easier UI)
-    for (const f of accepted) {
-      try {
-        const res = await uploadOne(f);
-        addMessage('ai', res.message || `Indexed ${res.filename} (${res.chunks} chunks)`);
-      } catch (e) {
-        addMessage('error', `Failed to upload ${f.name}: ${e.message}`);
+        const data = await resp.json();
+        totalAddedChunks += (data.chunks || 0);
+        loadedCount = data.file_count ?? loadedCount;
+        totalChunksAll = data.total_chunks ?? totalChunksAll;
       }
-    }
 
-    await refreshDocuments();
+      fileChunks.textContent = `✓ Loaded ${loadedCount} file(s) · ${totalChunksAll} total chunks`;
+      setStatus('ready', 'Documents ready');
+      documentLoaded = true;
+
+      input.disabled = false;
+      sendBtn.disabled = false;
+      input.placeholder = 'Ask anything about your documents...';
+      chatSub.textContent = 'Documents loaded · Ask anything';
+      sampleBtns.forEach(b => b.disabled = false);
+
+      addMessage(
+        'ai',
+        `✅ Indexed <strong>${files.length} file(s)</strong> (+<strong>${totalAddedChunks}</strong> chunks).
+        <br>Now ask me anything about your documents.`
+      );
+
+    } catch (err) {
+      setStatus('error', 'Upload failed');
+      fileChunks.textContent = '✗ Failed to upload';
+      addMessage('error', `Failed to upload: ${err.message}`);
+      uploadZone.style.display = 'block';
+      fileInfo.style.display = 'none';
+    }
   }
 
-  // ── Query ─────────────────────────────────────────────────────────────
   async function sendQuery(question) {
     if (!question.trim() || isThinking || !documentLoaded) return;
 
@@ -1090,22 +939,20 @@
     setThinking(true);
 
     try {
-      const resp = await fetch(API_BASE + '/query', {
+      const resp = await fetchWithTimeout(API_BASE + '/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question })
-      });
+      }, 60000);
 
       if (!resp.ok) {
-        const err = await resp.json().catch(() => ({}));
-        throw new Error(err.detail || ('Request failed: ' + resp.status));
+        throw new Error('Request failed: ' + resp.status);
       }
 
       const data = await resp.json();
 
       if (data.success) {
-        // Treat API output as text to avoid HTML injection
-        addMessage('ai', data.answer || '(No answer returned)', data.sources || []);
+        addMessage('ai', data.answer, data.sources);
       } else {
         addMessage('error', `Something went wrong: ${data.error || 'Unknown error'}`);
       }
@@ -1113,55 +960,56 @@
     } catch (err) {
       addMessage(
         'error',
-        `Connection error: ${err.message}. The Space may be sleeping — open it to wake it up, then try again.`
+        `Connection error: ${err.message}.
+        <br><br>
+        If the Space is sleeping, open it to wake it:
+        <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" style="color:#60a5fa;">DocMind AI</a>
+        <br>
+        Then refresh and try again.`
       );
     } finally {
       setThinking(false);
     }
   }
 
-  // ── Buttons: clear all / clear memory ─────────────────────────────────
-  clearAllBtn.addEventListener('click', async () => {
-    if (isThinking) return;
-    try {
-      setStatus('loading', 'Clearing...');
-      await fetch(API_BASE + '/reset', { method: 'POST' });
-      addMessage('ai', 'Cleared all documents and chat memory.');
-    } catch (e) {
-      addMessage('error', 'Failed to clear all. Try again.');
-    } finally {
-      await refreshDocuments();
-    }
+  // File input change
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files && fileInput.files.length) uploadDocuments(fileInput.files);
   });
 
-  clearMemoryBtn.addEventListener('click', async () => {
-    if (isThinking) return;
-    try {
-      setStatus(documentLoaded ? 'ready' : 'idle', 'Clearing memory...');
-      const r = await fetch(API_BASE + '/memory/clear', { method: 'POST' });
-      if (!r.ok) throw new Error('Failed');
-      addMessage('ai', 'Chat memory cleared (documents kept).');
-    } catch (e) {
-      addMessage('error', 'Failed to clear memory.');
-    } finally {
-      await refreshDocuments();
-    }
-  });
-
-  // ── Event listeners ───────────────────────────────────────────────────
-  fileInput.addEventListener('change', () => handleFiles(fileInput.files));
-
+  // Drag and drop
   uploadZone.addEventListener('click', () => fileInput.click());
   uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
   uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
   uploadZone.addEventListener('drop', (e) => {
     e.preventDefault();
     uploadZone.classList.remove('dragover');
-    handleFiles(e.dataTransfer.files);
+    const files = e.dataTransfer.files;
+    if (files && files.length) uploadDocuments(files);
   });
 
+  // Remove all docs
+  fileRemove.addEventListener('click', async () => {
+    try {
+      await fetchWithTimeout(API_BASE + '/reset', { method: 'POST' }, 20000);
+    } catch {}
+
+    documentLoaded = false;
+    fileInfo.style.display = 'none';
+    uploadZone.style.display = 'block';
+    input.disabled = true;
+    sendBtn.disabled = true;
+    input.placeholder = 'Upload documents first, then ask anything...';
+    setStatus('idle', 'No document loaded');
+    chatSub.textContent = 'Ready to analyze your documents';
+    sampleBtns.forEach(b => b.disabled = true);
+    addMessage('ai', 'Documents removed. Upload new files to continue.');
+  });
+
+  // Send
   sendBtn.addEventListener('click', () => sendQuery(input.value));
 
+  // Enter key
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -1169,13 +1017,15 @@
     }
   });
 
+  // Auto-resize textarea
   input.addEventListener('input', () => {
     input.style.height = 'auto';
     input.style.height = Math.min(input.scrollHeight, 120) + 'px';
   });
 
+  // Sample questions
   sampleBtns.forEach(btn => {
-    btn.disabled = true; // enabled after docs load
+    btn.disabled = true;
     btn.addEventListener('click', () => {
       const q = btn.getAttribute('data-q');
       if (q && documentLoaded && !isThinking) {
@@ -1185,71 +1035,69 @@
     });
   });
 
-  // Initial sync (if server already has docs loaded)
-  await refreshDocuments();
 })();
 </script>
 
 <!-- ==================== CONTACT SECTION ==================== -->
 <section id="contact" class="contact">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag light"><i class="fas fa-paper-plane"></i> Get in touch</span>
-            <h2 class="section-title light">Let's Work Together</h2>
-            <p class="section-subtitle">
-                I'm currently open to new opportunities. Whether you have a project
-                in mind, a question, or just want to connect — my inbox is always open.
-            </p>
-        </div>
-        <div class="contact-grid">
-            <a href="mailto:Ryan.farahani97@gmail.com" class="contact-card">
-                <div class="contact-icon-wrapper">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3>Email</h3>
-                <p>Ryan.farahani97@gmail.com</p>
-                <span class="contact-action">Send a message <i class="fas fa-arrow-right"></i></span>
-            </a>
-            <a href="https://linkedin.com/in/ryan-farahanii" target="_blank" rel="noopener noreferrer" class="contact-card">
-                <div class="contact-icon-wrapper linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </div>
-                <h3>LinkedIn</h3>
-                <p>ryan-farahanii</p>
-                <span class="contact-action">Connect with me <i class="fas fa-arrow-right"></i></span>
-            </a>
-            <a href="https://github.com/ryanfarahani1" target="_blank" rel="noopener noreferrer" class="contact-card">
-                <div class="contact-icon-wrapper github">
-                    <i class="fab fa-github"></i>
-                </div>
-                <h3>GitHub</h3>
-                <p>ryanfarahani1</p>
-                <span class="contact-action">View my repos <i class="fas fa-arrow-right"></i></span>
-            </a>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag light"><i class="fas fa-paper-plane"></i> Get in touch</span>
+      <h2 class="section-title light">Let's Work Together</h2>
+      <p class="section-subtitle">
+        I'm currently open to new opportunities. Whether you have a project
+        in mind, a question, or just want to connect — my inbox is always open.
+      </p>
     </div>
+    <div class="contact-grid">
+      <a href="mailto:Ryan.farahani97@gmail.com" class="contact-card">
+        <div class="contact-icon-wrapper">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email</h3>
+        <p>Ryan.farahani97@gmail.com</p>
+        <span class="contact-action">Send a message <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="https://linkedin.com/in/ryan-farahanii" target="_blank" class="contact-card">
+        <div class="contact-icon-wrapper linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <h3>LinkedIn</h3>
+        <p>ryan-farahanii</p>
+        <span class="contact-action">Connect with me <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="https://github.com/ryanfarahani1" target="_blank" class="contact-card">
+        <div class="contact-icon-wrapper github">
+          <i class="fab fa-github"></i>
+        </div>
+        <h3>GitHub</h3>
+        <p>ryanfarahani1</p>
+        <span class="contact-action">View my repos <i class="fas fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- ==================== FOOTER ==================== -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span class="logo-bracket">&lt;</span>Ryan<span class="logo-bracket">/&gt;</span>
-            </div>
-            <p class="footer-text">Designed & built by Ryan Farahani © 2025</p>
-            <div class="footer-social">
-                <a href="https://linkedin.com/in/ryan-farahanii" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/ryanfarahani1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:Ryan.farahani97@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>Ryan<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-text">Designed & built by Ryan Farahani © 2025</p>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/ryan-farahanii" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/ryanfarahani1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:Ryan.farahani97@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
+  </div>
 </footer>
 
 <!-- ==================== BACK TO TOP ==================== -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
+  <i class="fas fa-arrow-up"></i>
 </button>
 
 <script src="script.js"></script>
