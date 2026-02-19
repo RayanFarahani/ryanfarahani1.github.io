@@ -159,7 +159,7 @@
       <span class="section-tag"><i class="fas fa-rocket"></i> Try it live</span>
       <h2 class="section-title">Try my AI</h2>
       <p class="section-subtitle">
-        Image captioning and document Q&A — built and deployed. No sign-up required.
+        Image captioning, hand-tracking drawing, and document Q&A — built and deployed. No sign-up required.
       </p>
     </div>
 
@@ -182,6 +182,31 @@
         <p id="captionResult" class="demo-result"></p>
       </div>
     </div>
+    </div>
+
+    <!-- Finger Drawer (hand tracking) -->
+    <div class="demo-block" id="finger-drawer">
+      <h3 class="demo-block-title"><i class="fas fa-hand-paper"></i> Finger Drawer</h3>
+      <p class="demo-block-desc">Draw in the air with your index finger. From <a href="https://github.com/RayanFarahani/Finger-drawer" target="_blank" rel="noopener noreferrer">Finger-drawer</a> — hand tracking in the browser.</p>
+      <div class="finger-drawer-wrap">
+        <div class="finger-drawer-view">
+          <video id="fdVideo" class="fd-video" playsinline muted></video>
+          <canvas id="fdCanvas" class="fd-canvas"></canvas>
+          <div class="fd-overlay-status" id="fdStatus">Allow camera to start</div>
+        </div>
+        <div class="finger-drawer-controls">
+          <button type="button" class="fd-btn fd-btn-clear" id="fdClear" title="Clear canvas"><i class="fas fa-eraser"></i> Clear</button>
+          <span class="fd-color-label">Color:</span>
+          <button type="button" class="fd-btn fd-color" data-color="r" title="Red" style="background:#ef4444;"></button>
+          <button type="button" class="fd-btn fd-color" data-color="g" title="Green" style="background:#22c55e;"></button>
+          <button type="button" class="fd-btn fd-color" data-color="b" title="Blue" style="background:#3b82f6;"></button>
+          <span class="fd-size-label">Brush:</span>
+          <button type="button" class="fd-btn fd-size" data-dir="-"><i class="fas fa-minus"></i></button>
+          <span class="fd-size-val" id="fdBrushSize">5</span>
+          <button type="button" class="fd-btn fd-size" data-dir="+"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+      <p class="finger-drawer-hint">Open hand to draw with index finger; close fist to stop. Requires camera access.</p>
     </div>
 
     <!-- DocMind AI -->
@@ -1225,6 +1250,169 @@
   // ── Init ──────────────────────────────────────────────────────────────
   renderDocList();
 
+})();
+</script>
+
+<!-- ==================== FINGER DRAWER (hand tracking) ==================== -->
+<script type="module">
+(function() {
+  console.log('Finger Drawer script starting...');
+  const video = document.getElementById('fdVideo');
+  const canvas = document.getElementById('fdCanvas');
+  const statusEl = document.getElementById('fdStatus');
+  const clearBtn = document.getElementById('fdClear');
+  const brushSizeEl = document.getElementById('fdBrushSize');
+  if (!video || !canvas) {
+    console.error('Finger Drawer: video or canvas element not found');
+    return;
+  }
+  console.log('Finger Drawer: elements found, initializing...');
+
+  const ctx = canvas.getContext('2d');
+  let handLandmarker = null;
+  let stream = null;
+  let drawColor = [34, 197, 94];
+  let brushThickness = 5;
+  let prevX = null, prevY = null;
+  let lastVideoTime = -1;
+  let rafId = null;
+
+  function setStatus(text) {
+    if (statusEl) statusEl.textContent = text;
+  }
+
+  function isHandOpen(landmarks) {
+    const fingers = [[8, 6], [12, 10], [16, 14], [20, 18]];
+    let openCount = 0;
+    for (const [tipId, pipId] of fingers) {
+      const tip = landmarks[tipId];
+      const pip = landmarks[pipId];
+      if (tip.y < pip.y) openCount++;
+    }
+    return openCount >= 3;
+  }
+
+  function drawFrame() {
+    if (!handLandmarker || video.readyState < 2) {
+      rafId = requestAnimationFrame(drawFrame);
+      return;
+    }
+    const now = performance.now();
+    if (lastVideoTime !== video.currentTime) {
+      lastVideoTime = video.currentTime;
+      try {
+        const results = handLandmarker.detectForVideo(video, now);
+        if (results.landmarks && results.landmarks.length > 0) {
+          const landmarks = results.landmarks[0];
+          const open = isHandOpen(landmarks);
+          const w = canvas.width;
+          const h = canvas.height;
+          const x = Math.round(landmarks[8].x * w);
+          const y = Math.round(landmarks[8].y * h);
+          if (open) {
+            setStatus('Drawing');
+            if (prevX != null && prevY != null) {
+              ctx.strokeStyle = 'rgb(' + drawColor[0] + ',' + drawColor[1] + ',' + drawColor[2] + ')';
+              ctx.lineWidth = brushThickness;
+              ctx.lineCap = 'round';
+              ctx.beginPath();
+              ctx.moveTo(prevX, prevY);
+              ctx.lineTo(x, y);
+              ctx.stroke();
+            }
+            prevX = x;
+            prevY = y;
+          } else {
+            setStatus('Fist to stop');
+            prevX = null;
+            prevY = null;
+          }
+        } else {
+          setStatus('Show your hand');
+          prevX = null;
+          prevY = null;
+        }
+      } catch (e) {}
+    }
+    rafId = requestAnimationFrame(drawFrame);
+  }
+
+  clearBtn.addEventListener('click', function() {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    setStatus('Cleared');
+  });
+
+  document.querySelectorAll('.fd-color').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.fd-color').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      const c = btn.getAttribute('data-color');
+      if (c === 'r') drawColor = [239, 68, 68];
+      else if (c === 'g') drawColor = [34, 197, 94];
+      else if (c === 'b') drawColor = [59, 130, 246];
+    });
+  });
+  document.querySelector('.fd-color[data-color="g"]').classList.add('active');
+
+  document.querySelectorAll('.fd-size').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const dir = btn.getAttribute('data-dir');
+      if (dir === '+') brushThickness = Math.min(30, brushThickness + 2);
+      else brushThickness = Math.max(1, brushThickness - 2);
+      if (brushSizeEl) brushSizeEl.textContent = brushThickness;
+    });
+  });
+
+  async function init() {
+    setStatus('Loading model…');
+    console.log('Finger Drawer: Loading MediaPipe...');
+    try {
+      const { HandLandmarker, FilesetResolver } = await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/vision_bundle.mjs');
+      console.log('Finger Drawer: MediaPipe imported, creating resolver...');
+      const vision = await FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm');
+      console.log('Finger Drawer: Creating HandLandmarker...');
+      handLandmarker = await HandLandmarker.createFromOptions(vision, {
+        baseOptions: { modelAssetPath: 'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task' },
+        numHands: 1,
+        runningMode: 'VIDEO'
+      });
+      console.log('Finger Drawer: HandLandmarker created successfully');
+    } catch (e) {
+      setStatus('Model load failed - check console');
+      console.error('Finger Drawer: Error loading MediaPipe:', e);
+      return;
+    }
+    setStatus('Starting camera…');
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user', width: 640, height: 480 } });
+      video.srcObject = stream;
+      await video.play();
+    } catch (e) {
+      setStatus('Camera denied or unavailable');
+      return;
+    }
+    const resize = function() {
+      const wrap = video.parentElement;
+      const w = wrap.clientWidth;
+      const h = wrap.clientHeight;
+      canvas.width = w;
+      canvas.height = h;
+      video.width = w;
+      video.height = h;
+    };
+    video.addEventListener('loadedmetadata', resize);
+    resize();
+    setStatus('Open hand to draw');
+    lastVideoTime = -1;
+    drawFrame();
+  }
+
+  init();
+  window.addEventListener('beforeunload', function() {
+    if (rafId) cancelAnimationFrame(rafId);
+    if (stream) stream.getTracks().forEach(function(t) { t.stop(); });
+  });
 })();
 </script>
 
