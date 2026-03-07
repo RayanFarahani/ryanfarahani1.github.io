@@ -1,1566 +1,1586 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rayan Farahani — Data Analyst & AI Engineer</title>
-  <meta name="description" content="Data Analyst & AI Engineer specializing in Python, SQL, Power BI, and Machine Learning. Based in Sydney, Australia.">
+  <meta name="description" content="Data Analyst & AI Engineer specializing in Python, SQL, Power BI, and Machine Learning. Based in Sydney, Australia." />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<a class="skip-link" href="#mainContent">Skip to content</a>
+  <!-- ==================== SKIP LINK (accessibility) ==================== -->
+  <a class="skip-link" href="#mainContent">Skip to content</a>
 
-<!-- ==================== SKIP LINK (accessibility) ==================== -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- ==================== SCROLL PROGRESS BAR ==================== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- ==================== SCROLL PROGRESS BAR ==================== -->
-<div class="scroll-progress" id="scrollProgress"></div>
+  <!-- ==================== CUSTOM CURSOR ==================== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- ==================== CUSTOM CURSOR ==================== -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- ==================== NAVIGATION ==================== -->
-<nav class="navbar" id="navbar" aria-label="Main navigation">
-  <div class="nav-container">
-    <a href="#home" class="nav-logo" aria-label="Rayan Farahani home">
-      <span class="logo-bracket">&lt;</span>Rayan<span class="logo-bracket">/&gt;</span>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-      <li><a href="#demos" class="nav-link" data-section="demos">Demos</a></li>
-      <li><a href="#projects" class="nav-link" data-section="projects">Work</a></li>
-      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-      </button>
-      <a href="resume.pdf" class="nav-resume-btn" target="_blank" rel="noopener noreferrer">Resume</a>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<main id="mainContent">
-<!-- ==================== HERO SECTION ==================== -->
-<section id="home" class="hero" aria-label="Introduction">
-  <div class="hero-bg-animation">
-    <div class="floating-shape shape-1"></div>
-    <div class="floating-shape shape-2"></div>
-    <div class="floating-shape shape-3"></div>
-    <div class="grid-bg"></div>
-  </div>
-  <div class="hero-container" id="main-content">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot" aria-hidden="true"></span>
-        Available for opportunities
-      </div>
-      <h1 class="hero-name">
-        I build <span class="gradient-text">AI that ships.</span>
-      </h1>
-      <p class="hero-byline">Rayan Farahani — Data Analyst & AI Engineer</p>
-      <div class="hero-title-wrapper">
-        <span class="hero-title-static">Data →&nbsp;</span>
-        <span class="hero-title-typed" id="typedText"></span>
-        <span class="typed-cursor">|</span>
-      </div>
-      <p class="hero-description">
-        I design clean, production-ready AI solutions that turn complex data
-        into clear decisions. Focused on measurable outcomes, fast iteration,
-        and thoughtful user experience.
-      </p>
-      <div class="hero-buttons">
-        <a href="#demos" class="btn btn-primary">
-          <span>Try my AI demos</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="#projects" class="btn btn-ghost">
-          <span>View projects</span>
-          <i class="fas fa-briefcase"></i>
-        </a>
-      </div>
-      <div class="hero-social">
-        <a href="https://linkedin.com/in/rayanfarahani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/RayanFarahani" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:Ryan.farahani97@gmail.com" aria-label="Email" class="social-link">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-image-wrapper">
-        <div class="hero-image-ring"></div>
-        <div class="hero-image-ring ring-2"></div>
-        <img src="images/profile1.jpg" alt="Rayan Farahani" class="hero-photo" width="300" height="300">
-        <div class="hero-floating-card card-1"><i class="fab fa-python"></i><span>Python</span></div>
-        <div class="hero-floating-card card-2"><i class="fas fa-brain"></i><span>AI/ML</span></div>
-        <div class="hero-floating-card card-3"><i class="fas fa-chart-line"></i><span>Analytics</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-indicator" aria-hidden="true">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-<!-- ==================== STATS BAR ==================== -->
-<section class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
-        <span class="stat-label">Projects Completed</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
-        <span class="stat-label">AI Models Deployed</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
-        <span class="stat-label">Dashboards Built</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== DEMOS SECTION ==================== -->
-<section id="demos" class="demos-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag"><i class="fas fa-rocket"></i> Try it live</span>
-      <h2 class="section-title">Try my AI</h2>
-      <p class="section-subtitle">
-        Image captioning, hand-tracking drawing, and document Q&A — built and deployed. No sign-up required.
-      </p>
-    </div>
-
-    <!-- Image Captioning -->
-    <div class="demo-block" id="image-captioning">
-      <h3 class="demo-block-title"><i class="fas fa-image"></i> Image Captioning</h3>
-      <p class="demo-block-desc">EfficientNet-B0 + GPT-2 on Hugging Face. Upload an image to get a caption.</p>
-
-    <div class="demo-card demo-card-caption">
-      <div class="demo-card-inner">
-        <input type="file" id="captionImageInput" accept="image/*" class="demo-file-input">
-        <img id="captionImagePreview" alt="Preview" class="demo-preview" style="display:none;">
-      </div>
-      <div class="demo-card-actions">
-        <button class="btn btn-primary" id="captionSubmitBtn">
-          <span>Generate Caption</span>
-          <i class="fas fa-magic"></i>
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Rayan Farahani home">
+        <span class="logo-bracket">&lt;</span>Rayan<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#demos" class="nav-link" data-section="demos">Demos</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Work</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
         </button>
-        <p id="captionStatus" class="demo-status"></p>
-        <p id="captionResult" class="demo-result"></p>
-      </div>
-    </div>
-    </div>
-
-    <!-- Finger Drawer (hand tracking) -->
-    <div class="demo-block" id="finger-drawer">
-      <h3 class="demo-block-title"><i class="fas fa-hand-paper"></i> Finger Drawer</h3>
-      <p class="demo-block-desc">Draw in the air with your index finger using hand tracking. From <a href="https://github.com/RayanFarahani/Finger-drawer" target="_blank" rel="noopener noreferrer">Finger-drawer</a> — now running in your browser.</p>
-      
-      <!-- Instructions before activation -->
-      <div class="finger-drawer-instructions" id="fdInstructions">
-        <div class="fd-instructions-content">
-          <i class="fas fa-hand-paper fd-instructions-icon"></i>
-          <h4>How to Use Finger Drawer</h4>
-          <ol class="fd-instructions-list">
-            <li><strong>Open your hand</strong> — Keep your hand open with fingers extended</li>
-            <li><strong>Move your index finger</strong> — The tip of your index finger acts as the brush</li>
-            <li><strong>Close your fist</strong> — Make a fist to stop drawing and lift your hand</li>
-            <li><strong>Use controls</strong> — Change colors (Red/Green/Blue) and adjust brush size</li>
-            <li><strong>Clear</strong> — Click "Clear" to erase your drawing</li>
-          </ol>
-          <p class="fd-instructions-note"><i class="fas fa-info-circle"></i> Camera access will be requested when you start. Make sure you're in a well-lit area.</p>
-          <button type="button" class="btn btn-primary fd-activate-btn" id="fdActivate">
-            <i class="fas fa-play"></i>
-            <span>Start Drawing</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Drawing interface (hidden until activated) -->
-      <div class="finger-drawer-wrap" id="fdWrap" style="display:none;">
-        <div class="finger-drawer-view">
-          <video id="fdVideo" class="fd-video" playsinline muted></video>
-          <canvas id="fdCanvas" class="fd-canvas"></canvas>
-          <div class="fd-overlay-status" id="fdStatus">Loading...</div>
-        </div>
-        <div class="finger-drawer-controls">
-          <button type="button" class="fd-btn fd-btn-clear" id="fdClear" title="Clear canvas"><i class="fas fa-eraser"></i> Clear</button>
-          <span class="fd-color-label">Color:</span>
-          <button type="button" class="fd-btn fd-color" data-color="r" title="Red" style="background:#ef4444;"></button>
-          <button type="button" class="fd-btn fd-color" data-color="g" title="Green" style="background:#22c55e;"></button>
-          <button type="button" class="fd-btn fd-color" data-color="b" title="Blue" style="background:#3b82f6;"></button>
-          <span class="fd-size-label">Brush:</span>
-          <button type="button" class="fd-btn fd-size" data-dir="-"><i class="fas fa-minus"></i></button>
-          <span class="fd-size-val" id="fdBrushSize">5</span>
-          <button type="button" class="fd-btn fd-size" data-dir="+"><i class="fas fa-plus"></i></button>
+        <a href="resume.pdf" class="nav-resume-btn" target="_blank" rel="noopener noreferrer">Resume</a>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
         </div>
       </div>
     </div>
+  </nav>
 
-    <!-- DocMind AI -->
-    <div class="demo-block demo-block-docmind" id="demo">
-<section class="docmind-section" aria-label="DocMind AI demo">
+  <main id="mainContent">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero" aria-label="Introduction">
+      <div class="hero-bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="grid-bg"></div>
+      </div>
+      <div class="hero-container" id="main-content">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Available for opportunities
+          </div>
+          <h1 class="hero-name">
+            I build <span class="gradient-text">AI that ships.</span>
+          </h1>
+          <p class="hero-byline">Rayan Farahani — Data Analyst & AI Engineer</p>
+          <div class="hero-title-wrapper">
+            <span class="hero-title-static">Data →&nbsp;</span>
+            <span class="hero-title-typed" id="typedText"></span>
+            <span class="typed-cursor">|</span>
+          </div>
+          <p class="hero-description">
+            I design clean, production-ready AI solutions that turn complex data
+            into clear decisions. Focused on measurable outcomes, fast iteration,
+            and thoughtful user experience.
+          </p>
+          <div class="hero-buttons">
+            <a href="#demos" class="btn btn-primary">
+              <span>Try my AI demos</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#projects" class="btn btn-ghost">
+              <span>View projects</span>
+              <i class="fas fa-briefcase"></i>
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://linkedin.com/in/rayanfarahani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/RayanFarahani" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:Ryan.farahani97@gmail.com" aria-label="Email" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <div class="hero-image-ring"></div>
+            <div class="hero-image-ring ring-2"></div>
+            <img src="images/profile1.jpg" alt="Rayan Farahani" class="hero-photo" width="300" height="300" />
+            <div class="hero-floating-card card-1"><i class="fab fa-python"></i><span>Python</span></div>
+            <div class="hero-floating-card card-2"><i class="fas fa-brain"></i><span>AI/ML</span></div>
+            <div class="hero-floating-card card-3"><i class="fas fa-chart-line"></i><span>Analytics</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
 
-  <!-- Ambient background -->
-  <div class="dm-bg">
-    <div class="dm-orb dm-orb-1"></div>
-    <div class="dm-orb dm-orb-2"></div>
-    <div class="dm-orb dm-orb-3"></div>
-    <div class="dm-grid"></div>
-  </div>
+    <!-- ==================== STATS BAR ==================== -->
+    <section class="stats-bar">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">AI Models Deployed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Dashboards Built</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="container" style="position:relative;z-index:1;">
-
-    <!-- Section header -->
-    <div class="section-header reveal">
-      <span class="section-tag light"><i class="fas fa-brain"></i> Live AI Demo</span>
-      <h2 class="section-title light">DocMind AI</h2>
-      <p class="section-subtitle">
-        Upload up to 5 files (PDF, TXT, DOCX, CSV, XLSX, images) and chat with your documents —
-        powered by RAG, ChromaDB, and Mistral-7B. Running live on Hugging Face.
-      </p>
-    </div>
-
-    <!-- Main demo card -->
-    <div class="dm-card">
-
-      <!-- Left panel: info + upload -->
-      <div class="dm-panel dm-left">
-
-        <!-- Status indicator -->
-        <div class="dm-status" id="dmStatus">
-          <span class="dm-status-dot idle"></span>
-          <span class="dm-status-text">No document loaded</span>
+    <!-- ==================== DEMOS SECTION ==================== -->
+    <section id="demos" class="demos-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-rocket"></i> Try it live</span>
+          <h2 class="section-title">Try my AI</h2>
+          <p class="section-subtitle">
+            Image captioning, hand-tracking drawing, and document Q&A — built and deployed. No sign-up required.
+          </p>
         </div>
 
-        <!-- Document list (shown when files are loaded) -->
-        <div class="dm-doc-list" id="dmDocList" style="display:none;">
-          <div class="dm-doc-list-header">
-            <div class="dm-doc-count-wrap">
-              <span class="dm-doc-count-badge" id="dmDocCount">0 / 5</span>
-              <span class="dm-doc-count-label">documents loaded</span>
+        <!-- Image Captioning -->
+        <div class="demo-block" id="image-captioning">
+          <h3 class="demo-block-title"><i class="fas fa-image"></i> Image Captioning</h3>
+          <p class="demo-block-desc">EfficientNet-B0 + GPT-2 on Hugging Face. Upload an image to get a caption.</p>
+
+          <div class="demo-card demo-card-caption">
+            <div class="demo-card-inner">
+              <input type="file" id="captionImageInput" accept="image/*" class="demo-file-input" />
+              <img id="captionImagePreview" alt="Preview" class="demo-preview" style="display:none;" />
             </div>
-            <button class="dm-clear-all-btn" id="dmClearAll" title="Remove all documents">
-              <i class="fas fa-trash-alt"></i> Clear All
-            </button>
-          </div>
-          <div class="dm-doc-items" id="dmDocItems"></div>
-          <div class="dm-doc-total" id="dmDocTotal"></div>
-        </div>
-
-        <!-- Upload zone -->
-        <div class="dm-upload-zone" id="dmUploadZone">
-          <input type="file" id="dmFileInput" accept=".pdf,.txt,.doc,.docx,.csv,.xlsx,.xls,.jpg,.jpeg,.png,.webp" multiple hidden>
-          <div class="dm-upload-icon">
-            <i class="fas fa-cloud-upload-alt"></i>
-          </div>
-          <p class="dm-upload-title" id="dmUploadTitle">Drop your files here</p>
-          <p class="dm-upload-sub" id="dmUploadSub">Up to 5 files &middot; PDF, TXT, DOCX, CSV, XLSX, JPG/PNG/WEBP</p>
-          <button class="dm-upload-btn">
-            <i class="fas fa-folder-open"></i> Browse Files
-          </button>
-        </div>
-        <!-- Max files reached message (hidden by default) -->
-        <div class="dm-max-reached" id="dmMaxReached" style="display:none;">
-          <i class="fas fa-exclamation-circle"></i>
-          Maximum 5 files reached. Remove a file to upload more.
-        </div>
-
-        <!-- OR divider -->
-        <div class="dm-or">
-          <span>or try a sample question</span>
-        </div>
-
-        <!-- Sample questions -->
-        <div class="dm-samples">
-          <button class="dm-sample-btn" data-q="What are the main topics covered in these documents?">
-            <i class="fas fa-list"></i> Main topics
-          </button>
-          <button class="dm-sample-btn" data-q="Summarize the key findings or conclusions.">
-            <i class="fas fa-compress-alt"></i> Summarize
-          </button>
-          <button class="dm-sample-btn" data-q="What recommendations are made?">
-            <i class="fas fa-lightbulb"></i> Recommendations
-          </button>
-          <button class="dm-sample-btn" data-q="What data or evidence is presented?">
-            <i class="fas fa-chart-bar"></i> Evidence
-          </button>
-        </div>
-
-        <!-- Tech stack -->
-        <div class="dm-tech">
-          <span class="dm-tech-label">Powered by</span>
-          <div class="dm-tech-pills">
-            <span>LangChain</span>
-            <span>ChromaDB</span>
-            <span>Mistral-7B</span>
-            <span>FastAPI</span>
-            <span>HuggingFace</span>
+            <div class="demo-card-actions">
+              <button class="btn btn-primary" id="captionSubmitBtn">
+                <span>Generate Caption</span>
+                <i class="fas fa-magic"></i>
+              </button>
+              <p id="captionStatus" class="demo-status"></p>
+              <p id="captionResult" class="demo-result"></p>
+            </div>
           </div>
         </div>
 
-        <!-- External link -->
-        <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" rel="noopener noreferrer" class="dm-external-link">
-          <i class="fas fa-external-link-alt"></i>
-          Open full app on HuggingFace
-        </a>
+        <!-- Finger Drawer (hand tracking) -->
+        <div class="demo-block" id="finger-drawer">
+          <h3 class="demo-block-title"><i class="fas fa-hand-paper"></i> Finger Drawer</h3>
+          <p class="demo-block-desc">
+            Draw in the air with your index finger using hand tracking. From
+            <a href="https://github.com/RayanFarahani/Finger-drawer" target="_blank" rel="noopener noreferrer">Finger-drawer</a>
+            — now running in your browser.
+          </p>
 
-      </div>
-
-      <!-- Right panel: chat -->
-      <div class="dm-panel dm-right">
-
-        <!-- Chat header -->
-        <div class="dm-chat-header">
-          <div class="dm-chat-avatar">
-            <i class="fas fa-brain"></i>
+          <!-- Instructions before activation -->
+          <div class="finger-drawer-instructions" id="fdInstructions">
+            <div class="fd-instructions-content">
+              <i class="fas fa-hand-paper fd-instructions-icon"></i>
+              <h4>How to Use Finger Drawer</h4>
+              <ol class="fd-instructions-list">
+                <li><strong>Open your hand</strong> — Keep your hand open with fingers extended</li>
+                <li><strong>Move your index finger</strong> — The tip of your index finger acts as the brush</li>
+                <li><strong>Close your fist</strong> — Make a fist to stop drawing and lift your hand</li>
+                <li><strong>Use controls</strong> — Change colors (Red/Green/Blue) and adjust brush size</li>
+                <li><strong>Clear</strong> — Click "Clear" to erase your drawing</li>
+              </ol>
+              <p class="fd-instructions-note">
+                <i class="fas fa-info-circle"></i> Camera access will be requested when you start. Make sure you're in a well-lit area.
+              </p>
+              <button type="button" class="btn btn-primary fd-activate-btn" id="fdActivate">
+                <i class="fas fa-play"></i>
+                <span>Start Drawing</span>
+              </button>
+            </div>
           </div>
-          <div>
-            <div class="dm-chat-name">DocMind AI</div>
-            <div class="dm-chat-sub" id="dmChatSub">Ready to analyze your documents</div>
-          </div>
-          <div class="dm-thinking" id="dmThinking">
-            <span></span><span></span><span></span>
+
+          <!-- Drawing interface (hidden until activated) -->
+          <div class="finger-drawer-wrap" id="fdWrap" style="display:none;">
+            <div class="finger-drawer-view">
+              <video id="fdVideo" class="fd-video" playsinline muted></video>
+              <canvas id="fdCanvas" class="fd-canvas"></canvas>
+              <div class="fd-overlay-status" id="fdStatus">Loading...</div>
+            </div>
+            <div class="finger-drawer-controls">
+              <button type="button" class="fd-btn fd-btn-clear" id="fdClear" title="Clear canvas"><i class="fas fa-eraser"></i> Clear</button>
+              <span class="fd-color-label">Color:</span>
+              <button type="button" class="fd-btn fd-color" data-color="r" title="Red" style="background:#ef4444;"></button>
+              <button type="button" class="fd-btn fd-color" data-color="g" title="Green" style="background:#22c55e;"></button>
+              <button type="button" class="fd-btn fd-color" data-color="b" title="Blue" style="background:#3b82f6;"></button>
+              <span class="fd-size-label">Brush:</span>
+              <button type="button" class="fd-btn fd-size" data-dir="-"><i class="fas fa-minus"></i></button>
+              <span class="fd-size-val" id="fdBrushSize">5</span>
+              <button type="button" class="fd-btn fd-size" data-dir="+"><i class="fas fa-plus"></i></button>
+            </div>
           </div>
         </div>
 
-        <!-- Messages -->
-        <div class="dm-messages" id="dmMessages">
-          <!-- Welcome message -->
-          <div class="dm-msg dm-msg-ai">
-            <div class="dm-msg-avatar"><i class="fas fa-brain"></i></div>
-            <div class="dm-msg-content">
-              <div class="dm-msg-bubble">
-                &#x1F44B; Hi! I'm <strong>DocMind AI</strong> — a RAG-powered assistant built by Rayan.<br><br>
-                Upload up to <strong>5 files</strong> (PDF, TXT, DOCX, CSV, XLSX, images) on the left, then ask me anything.
-                I'll retrieve the most relevant sections and give you accurate, grounded answers.
+        <!-- DocMind AI (FIXED: no nested section, safer rendering, better copy) -->
+        <div class="demo-block demo-block-docmind" id="demo">
+          <div class="docmind-section" aria-label="DocMind AI demo">
+
+            <!-- Ambient background -->
+            <div class="dm-bg">
+              <div class="dm-orb dm-orb-1"></div>
+              <div class="dm-orb dm-orb-2"></div>
+              <div class="dm-orb dm-orb-3"></div>
+              <div class="dm-grid"></div>
+            </div>
+
+            <div class="container" style="position:relative;z-index:1;">
+
+              <!-- Section header -->
+              <div class="section-header reveal">
+                <span class="section-tag light"><i class="fas fa-brain"></i> Live AI Demo</span>
+                <h2 class="section-title light">DocMind AI</h2>
+                <p class="section-subtitle">
+                  Upload up to 5 files (PDF, TXT, DOCX, CSV, XLSX, images) and chat with your documents —
+                  powered by RAG, ChromaDB, and Mistral-7B. Running live on Hugging Face.
+                </p>
               </div>
-              <div class="dm-msg-meta">DocMind AI &middot; Just now</div>
+
+              <!-- Main demo card -->
+              <div class="dm-card">
+
+                <!-- Left panel: info + upload -->
+                <div class="dm-panel dm-left">
+
+                  <!-- Status indicator -->
+                  <div class="dm-status" id="dmStatus">
+                    <span class="dm-status-dot idle"></span>
+                    <span class="dm-status-text">No document loaded</span>
+                  </div>
+
+                  <!-- Document list (shown when files are loaded) -->
+                  <div class="dm-doc-list" id="dmDocList" style="display:none;">
+                    <div class="dm-doc-list-header">
+                      <div class="dm-doc-count-wrap">
+                        <span class="dm-doc-count-badge" id="dmDocCount">0 / 5</span>
+                        <span class="dm-doc-count-label">documents loaded</span>
+                      </div>
+                      <button class="dm-clear-all-btn" id="dmClearAll" title="Remove all documents">
+                        <i class="fas fa-trash-alt"></i> Clear All
+                      </button>
+                    </div>
+                    <div class="dm-doc-items" id="dmDocItems"></div>
+                    <div class="dm-doc-total" id="dmDocTotal"></div>
+                  </div>
+
+                  <!-- Upload zone -->
+                  <div class="dm-upload-zone" id="dmUploadZone">
+                    <input type="file" id="dmFileInput" accept=".pdf,.txt,.doc,.docx,.csv,.xlsx,.xls,.jpg,.jpeg,.png,.webp" multiple hidden />
+                    <div class="dm-upload-icon">
+                      <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <p class="dm-upload-title" id="dmUploadTitle">Drop your files here</p>
+                    <p class="dm-upload-sub" id="dmUploadSub">Up to 5 files &middot; PDF, TXT, DOCX, CSV, XLSX, JPG/PNG/WEBP</p>
+                    <button class="dm-upload-btn" type="button">
+                      <i class="fas fa-folder-open"></i> Browse Files
+                    </button>
+                  </div>
+
+                  <!-- Max files reached message (hidden by default) -->
+                  <div class="dm-max-reached" id="dmMaxReached" style="display:none;">
+                    <i class="fas fa-exclamation-circle"></i>
+                    Maximum 5 files reached. Remove a file to upload more.
+                  </div>
+
+                  <!-- OR divider -->
+                  <div class="dm-or">
+                    <span>or try a sample question</span>
+                  </div>
+
+                  <!-- Sample questions -->
+                  <div class="dm-samples">
+                    <button class="dm-sample-btn" data-q="What are the main topics covered in these documents?">
+                      <i class="fas fa-list"></i> Main topics
+                    </button>
+                    <button class="dm-sample-btn" data-q="Summarize the key findings or conclusions.">
+                      <i class="fas fa-compress-alt"></i> Summarize
+                    </button>
+                    <button class="dm-sample-btn" data-q="What recommendations are made?">
+                      <i class="fas fa-lightbulb"></i> Recommendations
+                    </button>
+                    <button class="dm-sample-btn" data-q="What data or evidence is presented?">
+                      <i class="fas fa-chart-bar"></i> Evidence
+                    </button>
+                  </div>
+
+                  <!-- Tech stack -->
+                  <div class="dm-tech">
+                    <span class="dm-tech-label">Powered by</span>
+                    <div class="dm-tech-pills">
+                      <span>LangChain</span>
+                      <span>ChromaDB</span>
+                      <span>Mistral-7B</span>
+                      <span>FastAPI</span>
+                      <span>HuggingFace</span>
+                    </div>
+                  </div>
+
+                  <!-- External link -->
+                  <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" rel="noopener noreferrer" class="dm-external-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    Open full app on HuggingFace
+                  </a>
+
+                </div>
+
+                <!-- Right panel: chat -->
+                <div class="dm-panel dm-right">
+
+                  <!-- Chat header -->
+                  <div class="dm-chat-header">
+                    <div class="dm-chat-avatar">
+                      <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                      <div class="dm-chat-name">DocMind AI</div>
+                      <div class="dm-chat-sub" id="dmChatSub" aria-live="polite">Ready to analyze your documents</div>
+                    </div>
+                    <div class="dm-thinking" id="dmThinking">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+
+                  <!-- Messages -->
+                  <div class="dm-messages" id="dmMessages">
+                    <!-- Welcome message -->
+                    <div class="dm-msg dm-msg-ai">
+                      <div class="dm-msg-avatar"><i class="fas fa-brain"></i></div>
+                      <div class="dm-msg-content">
+                        <div class="dm-msg-bubble">
+                          👋 Hi! I’m <strong>DocMind AI</strong> — a RAG-powered assistant built by Rayan.<br><br>
+                          Upload up to <strong>5 files</strong> (PDF, TXT, DOCX, CSV, XLSX, images) on the left, then ask me anything.
+                          I retrieve the most relevant sections and answer with sources.
+                        </div>
+                        <div class="dm-msg-meta">DocMind AI &middot; Just now</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Input area -->
+                  <div class="dm-input-area">
+                    <div class="dm-input-wrap">
+                      <textarea
+                        id="dmInput"
+                        class="dm-input"
+                        placeholder="Upload documents first, then ask anything..."
+                        rows="1"
+                        disabled
+                      ></textarea>
+                      <button class="dm-send-btn" id="dmSendBtn" disabled type="button">
+                        <i class="fas fa-paper-plane"></i>
+                      </button>
+                    </div>
+                    <div class="dm-input-hint">
+                      <i class="fas fa-shield-alt"></i> Designed to keep answers grounded in your uploaded documents
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Stats row below card -->
+              <div class="dm-stats-row">
+                <div class="dm-stat-item">
+                  <i class="fas fa-layer-group"></i>
+                  <span class="dm-stat-val">600</span>
+                  <span class="dm-stat-lbl">Token Chunk Size</span>
+                </div>
+                <div class="dm-stat-item">
+                  <i class="fas fa-search"></i>
+                  <span class="dm-stat-val">MMR</span>
+                  <span class="dm-stat-lbl">Search Strategy</span>
+                </div>
+                <div class="dm-stat-item">
+                  <i class="fas fa-vector-square"></i>
+                  <span class="dm-stat-val">384</span>
+                  <span class="dm-stat-lbl">Embedding Dims</span>
+                </div>
+                <div class="dm-stat-item">
+                  <i class="fas fa-bolt"></i>
+                  <span class="dm-stat-val">Top-3</span>
+                  <span class="dm-stat-lbl">Retrieval K</span>
+                </div>
+                <div class="dm-stat-item">
+                  <i class="fas fa-robot"></i>
+                  <span class="dm-stat-val">Mistral-7B</span>
+                  <span class="dm-stat-lbl">LLM Backend</span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- Input area -->
-        <div class="dm-input-area">
-          <div class="dm-input-wrap">
-            <textarea
-              id="dmInput"
-              class="dm-input"
-              placeholder="Upload documents first, then ask anything..."
-              rows="1"
-              disabled
-            ></textarea>
-            <button class="dm-send-btn" id="dmSendBtn" disabled>
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-          <div class="dm-input-hint">
-            <i class="fas fa-shield-alt"></i> Answers are grounded in your documents only — no hallucinations
-          </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-folder-open"></i> My work</span>
+          <h2 class="section-title">Featured Projects</h2>
         </div>
 
-      </div>
-    </div>
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-layer-group"></i> All
+          </button>
+          <button class="filter-btn" data-filter="python">
+            <i class="fab fa-python"></i> Python
+          </button>
+          <button class="filter-btn" data-filter="sql">
+            <i class="fas fa-database"></i> SQL
+          </button>
+          <button class="filter-btn" data-filter="powerbi">
+            <i class="fas fa-chart-bar"></i> Power BI
+          </button>
+          <button class="filter-btn" data-filter="ai">
+            <i class="fas fa-robot"></i> AI / ML
+          </button>
+        </div>
 
-    <!-- Stats row below card -->
-    <div class="dm-stats-row">
-      <div class="dm-stat-item">
-        <i class="fas fa-layer-group"></i>
-        <span class="dm-stat-val">600</span>
-        <span class="dm-stat-lbl">Token Chunk Size</span>
-      </div>
-      <div class="dm-stat-item">
-        <i class="fas fa-search"></i>
-        <span class="dm-stat-val">MMR</span>
-        <span class="dm-stat-lbl">Search Strategy</span>
-      </div>
-      <div class="dm-stat-item">
-        <i class="fas fa-vector-square"></i>
-        <span class="dm-stat-val">384</span>
-        <span class="dm-stat-lbl">Embedding Dims</span>
-      </div>
-      <div class="dm-stat-item">
-        <i class="fas fa-bolt"></i>
-        <span class="dm-stat-val">Top-3</span>
-        <span class="dm-stat-lbl">Retrieval K</span>
-      </div>
-      <div class="dm-stat-item">
-        <i class="fas fa-robot"></i>
-        <span class="dm-stat-val">Mistral-7B</span>
-        <span class="dm-stat-lbl">LLM Backend</span>
-      </div>
-    </div>
+        <div class="projects-grid">
 
-  </div>
-</section>
-    </div>
-</section>
-
-<!-- ==================== PROJECTS SECTION ==================== -->
-<section id="projects" class="projects">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag"><i class="fas fa-folder-open"></i> My work</span>
-      <h2 class="section-title">Featured Projects</h2>
-    </div>
-
-    <!-- Filter Buttons -->
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">
-        <i class="fas fa-layer-group"></i> All
-      </button>
-      <button class="filter-btn" data-filter="python">
-        <i class="fab fa-python"></i> Python
-      </button>
-      <button class="filter-btn" data-filter="sql">
-        <i class="fas fa-database"></i> SQL
-      </button>
-      <button class="filter-btn" data-filter="powerbi">
-        <i class="fas fa-chart-bar"></i> Power BI
-      </button>
-      <button class="filter-btn" data-filter="ai">
-        <i class="fas fa-robot"></i> AI / ML
-      </button>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- PROJECT 1: Python -->
-      <div class="project-card" data-category="python">
-        <div class="project-image">
-          <img src="images/domain.jpg" alt="Sales Analysis">
-          <div class="project-overlay">
-            <div class="overlay-content">
-              <a href="https://your-streamlit-app.streamlit.app" target="_blank" rel="noopener noreferrer" class="overlay-btn primary">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="https://github.com/RayanFarahani/real-estate-ml-predictions" target="_blank" rel="noopener noreferrer" class="overlay-btn">
-                <i class="fab fa-github"></i> Source Code
-              </a>
+          <!-- PROJECT 1: Python -->
+          <div class="project-card" data-category="python">
+            <div class="project-image">
+              <img src="images/domain.jpg" alt="Sales Analysis" />
+              <div class="project-overlay">
+                <div class="overlay-content">
+                  <a href="https://your-streamlit-app.streamlit.app" target="_blank" rel="noopener noreferrer" class="overlay-btn primary">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/RayanFarahani/real-estate-ml-predictions" target="_blank" rel="noopener noreferrer" class="overlay-btn">
+                    <i class="fab fa-github"></i> Source Code
+                  </a>
+                </div>
+              </div>
+              <span class="project-badge python-badge">Python</span>
+            </div>
+            <div class="project-info">
+              <h3>Multi-Task Real Estate Analytics: Ensemble Learning for Price & Type Prediction</h3>
+              <p>
+                A top-performing AI system designed to accurately predict home prices and property types. By combining multiple smart models and cleaning complex data, this project provides highly reliable real estate market insights.
+              </p>
+              <div class="project-tech">
+                <span>Pandas</span>
+                <span>Plotly</span>
+                <span>Streamlit</span>
+                <span>Prophet</span>
+              </div>
+              <div class="project-links-mobile">
+                <a href="https://your-streamlit-app.streamlit.app" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="https://github.com/RayanFarahani/project1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+              </div>
             </div>
           </div>
-          <span class="project-badge python-badge">Python</span>
-        </div>
-        <div class="project-info">
-          <h3>Multi-Task Real Estate Analytics: Ensemble Learning for Price & Type Prediction</h3>
-          <p>A top-performing AI system designed to accurately predict home prices and property types. By combining multiple smart models and cleaning complex data, this project provides highly reliable real estate market insights.</p>
-          <div class="project-tech">
-            <span>Pandas</span>
-            <span>Plotly</span>
-            <span>Streamlit</span>
-            <span>Prophet</span>
-          </div>
-          <div class="project-links-mobile">
-            <a href="https://your-streamlit-app.streamlit.app" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="https://github.com/RayanFarahani/project1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
-          </div>
-        </div>
-      </div>
 
-
-      <!-- PROJECT 3: Power BI -->
-      <!-- PROJECT: NSW Councils Financial Report -->
-  <div class="project-card" data-category="powerbi">
-    <div class="project-image">
-      <img src="images/LGNSW.jpg" alt="NSW Councils Financial Report Dashboard">
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <a href="https://github.com/RayanFarahani/PowerBI_NSW_Councils_Financial_report" 
-             target="_blank" rel="noopener noreferrer" 
-             class="overlay-btn primary">
-            <i class="fab fa-github"></i> View Project
-          </a>
-        </div>
-      </div>
-      <span class="project-badge powerbi-badge">Power BI</span>
-    </div>
-     <div class="project-info">
-      <h3>NSW Councils Financial Performance Dashboard</h3>
-      <p>
-        Interactive Power BI report analyzing revenue, expenses, and financial health 
-        across NSW local councils. Built to uncover spending patterns, funding structures, 
-        and long-term sustainability indicators.
-      </p>
-      <div class="project-tech">
-        <span>Power BI</span>
-        <span>DAX</span>
-        <span>Data Modeling</span>
-        <span>Financial Analysis</span>
-      </div>
-      <div class="project-links-mobile">
-        <a href="https://github.com/RayanFarahani/PowerBI_NSW_Councils_Financial_report" 
-           target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i> Repository
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- PROJECT: Customer Churn Dashboard -->
-<div class="project-card" data-category="powerbi">
-  <div class="project-image">
-    <img src="images/customer churn.jpg" alt="Customer Churn Analysis Dashboard">
-    <div class="project-overlay">
-      <div class="overlay-content">
-        <a href="https://github.com/RayanFarahani/PowerBI_customer_churn" 
-           target="_blank" rel="noopener noreferrer" 
-           class="overlay-btn primary">
-          <i class="fab fa-github"></i> View Project
-        </a>
-      </div>
-    </div>
-    <span class="project-badge powerbi-badge">Power BI</span>
-  </div>
-  <div class="project-info">
-    <h3>Customer Churn Analysis Dashboard</h3>
-    <p>
-      Built a churn analysis dashboard to identify at-risk customers, 
-      retention drivers, and revenue impact. Includes segmentation analysis, 
-      KPI tracking, and interactive filtering for decision-makers.
-    </p>
-    <div class="project-tech">
-      <span>Power BI</span>
-      <span>DAX</span>
-      <span>Data Cleaning</span>
-      <span>KPI Design</span>
-    </div>
-    <div class="project-links-mobile">
-      <a href="https://github.com/RayanFarahani/PowerBI_customer_churn" 
-         target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i> Repository
-      </a>
-    </div>
-  </div>
-</div>
-<!-- PROJECT 4: Bank Marketing Analysis -->
-<div class="project-card" data-category="python">
-  <div class="project-image">
-    <img src="images/bank_marketing.jpg" alt="Bank Marketing Analysis">
-    <div class="project-overlay">
-      <div class="overlay-content">
-        <a href="https://github.com/RayanFarahani/Bank_marketing_analysis/tree/main"
-           target="_blank" rel="noopener noreferrer"
-           class="overlay-btn primary">
-          <i class="fab fa-github"></i> View Project
-        </a>
-      </div>
-    </div>
-    <span class="project-badge python-badge">Python</span>
-  </div>
-
-  <div class="project-info">
-    <h3>Bank Marketing Analysis — Logistic Regression (91.08% Accuracy)</h3>
-    <p>
-      Cleaned and prepared a bank marketing dataset, applied feature encoding (Label + One-Hot),
-      then trained and evaluated a Logistic Regression model. Reported results using a confusion
-      matrix and achieved ~91.08% test accuracy.
-    </p>
-    <div class="project-tech">
-      <span>Pandas</span>
-      <span>NumPy</span>
-      <span>Scikit-learn</span>
-      <span>One-Hot Encoding</span>
-      <span>Logistic Regression</span>
-    </div>
-
-    <div class="project-links-mobile">
-      <a href="https://github.com/RayanFarahani/Bank_marketing_analysis/tree/main"
-         target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i> Repository
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- PROJECT 5: Sea Turtle Image Segmentation -->
-<div class="project-card" data-category="ai">
-  <div class="project-image">
-    <img src="images/sea_turtle_segmentation.png" alt="Sea Turtle Image Segmentation">
-    <div class="project-overlay">
-      <div class="overlay-content">
-        <a href="https://github.com/RayanFarahani/SeaTurtleID2022"
-           target="_blank" rel="noopener noreferrer"
-           class="overlay-btn primary">
-          <i class="fab fa-github"></i> View Project
-        </a>
-      </div>
-    </div>
-    <span class="project-badge ai-badge">AI / ML</span>
-  </div>
-
-  <div class="project-info">
-    <h3>Sea Turtle Image Segmentation — U-Net vs U-Net + CBAM</h3>
-    <p>
-      Designed and evaluated deep learning segmentation models for sea turtle
-      detection. Compared baseline U-Net with attention-enhanced U-Net + CBAM
-      to measure performance improvements in pixel-level classification.
-    </p>
-
-    <div class="project-tech">
-      <span>PyTorch</span>
-      <span>U-Net</span>
-      <span>CBAM</span>
-      <span>Computer Vision</span>
-      <span>Segmentation</span>
-    </div>
-
-    <div class="project-links-mobile">
-      <a href="https://github.com/RayanFarahani/SeaTurtleID2022"
-         target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i> Repository
-      </a>
-    </div>
-  </div>
-</div>
-
-      <!-- PROJECT 6: AI -->
-      <div class="project-card" data-category="ai">
-        <div class="project-image">
-          <img src="https://via.placeholder.com/600x400/7c3aed/ffffff?text=RAG+Chatbot" alt="RAG Chatbot">
-          <div class="project-overlay">
-            <div class="overlay-content">
-              <a href="https://your-app.streamlit.app" target="_blank" rel="noopener noreferrer" class="overlay-btn primary">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="https://github.com/RayanFarahani/project6" target="_blank" rel="noopener noreferrer" class="overlay-btn">
-                <i class="fab fa-github"></i> Source Code
-              </a>
+          <!-- PROJECT 3: Power BI -->
+          <!-- PROJECT: NSW Councils Financial Report -->
+          <div class="project-card" data-category="powerbi">
+            <div class="project-image">
+              <img src="images/LGNSW.jpg" alt="NSW Councils Financial Report Dashboard" />
+              <div class="project-overlay">
+                <div class="overlay-content">
+                  <a href="https://github.com/RayanFarahani/PowerBI_NSW_Councils_Financial_report"
+                     target="_blank" rel="noopener noreferrer"
+                     class="overlay-btn primary">
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
+              </div>
+              <span class="project-badge powerbi-badge">Power BI</span>
+            </div>
+            <div class="project-info">
+              <h3>NSW Councils Financial Performance Dashboard</h3>
+              <p>
+                Interactive Power BI report analyzing revenue, expenses, and financial health
+                across NSW local councils. Built to uncover spending patterns, funding structures,
+                and long-term sustainability indicators.
+              </p>
+              <div class="project-tech">
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Data Modeling</span>
+                <span>Financial Analysis</span>
+              </div>
+              <div class="project-links-mobile">
+                <a href="https://github.com/RayanFarahani/PowerBI_NSW_Councils_Financial_report"
+                   target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
             </div>
           </div>
-          <span class="project-badge ai-badge">AI / ML</span>
-        </div>
-        <div class="project-info">
-          <h3>RAG Chatbot — Chat with PDF</h3>
-          <p>Built a Retrieval-Augmented Generation chatbot that lets users upload PDFs and ask questions. Uses LangChain + OpenAI + FAISS vector store.</p>
-          <div class="project-tech">
-            <span>LangChain</span>
-            <span>OpenAI</span>
-            <span>FAISS</span>
-            <span>Streamlit</span>
+
+          <!-- PROJECT: Customer Churn Dashboard -->
+          <div class="project-card" data-category="powerbi">
+            <div class="project-image">
+              <img src="images/customer churn.jpg" alt="Customer Churn Analysis Dashboard" />
+              <div class="project-overlay">
+                <div class="overlay-content">
+                  <a href="https://github.com/RayanFarahani/PowerBI_customer_churn"
+                     target="_blank" rel="noopener noreferrer"
+                     class="overlay-btn primary">
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
+              </div>
+              <span class="project-badge powerbi-badge">Power BI</span>
+            </div>
+            <div class="project-info">
+              <h3>Customer Churn Analysis Dashboard</h3>
+              <p>
+                Built a churn analysis dashboard to identify at-risk customers,
+                retention drivers, and revenue impact. Includes segmentation analysis,
+                KPI tracking, and interactive filtering for decision-makers.
+              </p>
+              <div class="project-tech">
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Data Cleaning</span>
+                <span>KPI Design</span>
+              </div>
+              <div class="project-links-mobile">
+                <a href="https://github.com/RayanFarahani/PowerBI_customer_churn"
+                   target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="project-links-mobile">
-            <a href="https://your-app.streamlit.app" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="https://github.com/RayanFarahani/project6" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+
+          <!-- PROJECT 4: Bank Marketing Analysis -->
+          <div class="project-card" data-category="python">
+            <div class="project-image">
+              <img src="images/commbank.jpg" alt="Bank Marketing Analysis" />
+              <div class="project-overlay">
+                <div class="overlay-content">
+                  <a href="https://github.com/RayanFarahani/Bank_marketing_analysis/tree/main"
+                     target="_blank" rel="noopener noreferrer"
+                     class="overlay-btn primary">
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
+              </div>
+              <span class="project-badge python-badge">Python</span>
+            </div>
+
+            <div class="project-info">
+              <h3>Bank Marketing Analysis — Logistic Regression (91.08% Accuracy)</h3>
+              <p>
+                Cleaned and prepared a bank marketing dataset, applied feature encoding (Label + One-Hot),
+                then trained and evaluated a Logistic Regression model. Reported results using a confusion
+                matrix and achieved ~91.08% test accuracy.
+              </p>
+              <div class="project-tech">
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>One-Hot Encoding</span>
+                <span>Logistic Regression</span>
+              </div>
+
+              <div class="project-links-mobile">
+                <a href="https://github.com/RayanFarahani/Bank_marketing_analysis/tree/main"
+                   target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
           </div>
+
+          <!-- PROJECT 5: Sea Turtle Image Segmentation -->
+          <div class="project-card" data-category="ai">
+            <div class="project-image">
+              <img src="images/Screenshot 2026-03-07 at 02.45.48.png" alt="Sea Turtle Image Segmentation" />
+              <div class="project-overlay">
+                <div class="overlay-content">
+                  <a href="https://github.com/RayanFarahani/SeaTurtleID2022"
+                     target="_blank" rel="noopener noreferrer"
+                     class="overlay-btn primary">
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
+              </div>
+              <span class="project-badge ai-badge">AI / ML</span>
+            </div>
+
+            <div class="project-info">
+              <h3>Sea Turtle Image Segmentation — U-Net vs U-Net + CBAM</h3>
+              <p>
+                Designed and evaluated deep learning segmentation models for sea turtle
+                detection. Compared baseline U-Net with attention-enhanced U-Net + CBAM
+                to measure performance improvements in pixel-level classification.
+              </p>
+
+              <div class="project-tech">
+                <span>PyTorch</span>
+                <span>U-Net</span>
+                <span>CBAM</span>
+                <span>Computer Vision</span>
+                <span>Segmentation</span>
+              </div>
+
+              <div class="project-links-mobile">
+                <a href="https://github.com/RayanFarahani/SeaTurtleID2022"
+                   target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: DocMind AI -->
+          <div class="project-card" data-category="ai">
+            <div class="project-image">
+              <img src="images/RAG.jpg" alt="DocMind AI - RAG Document Assistant" />
+              <div class="project-overlay">
+                <div class="overlay-content">
+                  <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai"
+                     target="_blank" rel="noopener noreferrer"
+                     class="overlay-btn primary">
+                    <i class="fas fa-external-link-alt"></i> Live App
+                  </a>
+                  <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai/tree/main"
+                     target="_blank" rel="noopener noreferrer"
+                     class="overlay-btn">
+                    <i class="fab fa-github"></i> Source Code
+                  </a>
+                </div>
+              </div>
+              <span class="project-badge ai-badge">AI / ML</span>
+            </div>
+
+            <div class="project-info">
+              <h3>DocMind AI — Multi-Document RAG Assistant</h3>
+              <p>
+                Production-ready Retrieval-Augmented Generation (RAG) system that allows users
+                to upload multiple documents (PDF, DOCX, CSV, images) and ask grounded questions.
+                Implements semantic search, MMR retrieval, and Mistral-7B for accurate answers with sources.
+              </p>
+
+              <div class="project-tech">
+                <span>LangChain</span>
+                <span>ChromaDB</span>
+                <span>Mistral-7B</span>
+                <span>FastAPI</span>
+                <span>HuggingFace</span>
+              </div>
+
+              <div class="project-links-mobile">
+                <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai"
+                   target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i> Live App
+                </a>
+                <a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai/tree/main"
+                   target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ==================== ABOUT SECTION ==================== -->
-<section id="about" class="about">
-  <div class="about-bg">
-    <div class="about-orb about-orb-1"></div>
-    <div class="about-orb about-orb-2"></div>
-    <div class="about-orb about-orb-3"></div>
-    <div class="about-grid"></div>
-  </div>
-  <div class="container about-container">
-    <div class="section-header">
-      <span class="section-tag"><i class="fas fa-user"></i> Get to know me</span>
-      <h2 class="section-title">About Me</h2>
-    </div>
-    <div class="about-inner">
-      <div class="about-text-col">
-        <div class="about-text">
-          <p class="about-lead">
-            I'm a <strong>Data Analyst</strong> and <strong>AI Engineer</strong> based in
-            Sydney, Australia, with a Master's in IT specializing in Artificial Intelligence.
-          </p>
-          <p>
-            I specialize in extracting insights from complex datasets, building interactive
-            dashboards, writing optimized SQL queries, and deploying AI/ML models that
-            solve real business problems.
-          </p>
-          <p>
-            I enjoy working with cross-functional teams to translate data into business
-            strategies that drive measurable results. My approach combines analytical
-            rigor with creative problem-solving.
-          </p>
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="about">
+      <div class="about-bg">
+        <div class="about-orb about-orb-1"></div>
+        <div class="about-orb about-orb-2"></div>
+        <div class="about-orb about-orb-3"></div>
+        <div class="about-grid"></div>
+      </div>
+      <div class="container about-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-user"></i> Get to know me</span>
+          <h2 class="section-title">About Me</h2>
         </div>
-        <div class="about-details">
-          <div class="detail-card">
-            <div class="detail-icon">
-              <i class="fas fa-map-marker-alt"></i>
+        <div class="about-inner">
+          <div class="about-text-col">
+            <div class="about-text">
+              <p class="about-lead">
+                I'm a <strong>Data Analyst</strong> and <strong>AI Engineer</strong> based in
+                Sydney, Australia, with a Master's in IT specializing in Artificial Intelligence.
+              </p>
+              <p>
+                I specialize in extracting insights from complex datasets, building interactive
+                dashboards, writing optimized SQL queries, and deploying AI/ML models that
+                solve real business problems.
+              </p>
+              <p>
+                I enjoy working with cross-functional teams to translate data into business
+                strategies that drive measurable results. My approach combines analytical
+                rigor with creative problem-solving.
+              </p>
             </div>
-            <div>
-              <span class="detail-label">Location</span>
-              <span class="detail-value">Sydney, Australia</span>
+            <div class="about-details">
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Sydney, Australia</span>
+                </div>
+              </div>
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <span class="detail-label">Education</span>
+                  <span class="detail-value">Master of IT in AI</span>
+                </div>
+              </div>
+              <div class="detail-card">
+                <div class="detail-icon status-icon">
+                  <i class="fas fa-circle"></i>
+                </div>
+                <div>
+                  <span class="detail-label">Status</span>
+                  <span class="detail-value">Open to opportunities</span>
+                </div>
+              </div>
             </div>
+            <a href="resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-download"></i>
+              <span>Download Resume</span>
+            </a>
           </div>
-          <div class="detail-card">
-            <div class="detail-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div>
-              <span class="detail-label">Education</span>
-              <span class="detail-value">Master of IT in AI</span>
-            </div>
-          </div>
-          <div class="detail-card">
-            <div class="detail-icon status-icon">
-              <i class="fas fa-circle"></i>
-            </div>
-            <div>
-              <span class="detail-label">Status</span>
-              <span class="detail-value">Open to opportunities</span>
+          <div class="about-tech-col">
+            <div class="tech-orbit">
+              <div class="orbit-center">
+                <span>Core<br />Stack</span>
+              </div>
+              <div class="orbit-ring ring-1">
+                <div class="orbit-item" style="--angle: 0deg;"><i class="fab fa-python"></i></div>
+                <div class="orbit-item" style="--angle: 90deg;"><i class="fas fa-database"></i></div>
+                <div class="orbit-item" style="--angle: 180deg;"><i class="fas fa-chart-bar"></i></div>
+                <div class="orbit-item" style="--angle: 270deg;"><i class="fas fa-robot"></i></div>
+              </div>
             </div>
           </div>
         </div>
-        <a href="resume.pdf" class="btn btn-primary" target="_blank">
-          <i class="fas fa-download"></i>
-          <span>Download Resume</span>
-        </a>
       </div>
-      <div class="about-tech-col">
-        <div class="tech-orbit">
-          <div class="orbit-center">
-            <span>Core<br>Stack</span>
-          </div>
-          <div class="orbit-ring ring-1">
-            <div class="orbit-item" style="--angle: 0deg;"><i class="fab fa-python"></i></div>
-            <div class="orbit-item" style="--angle: 90deg;"><i class="fas fa-database"></i></div>
-            <div class="orbit-item" style="--angle: 180deg;"><i class="fas fa-chart-bar"></i></div>
-            <div class="orbit-item" style="--angle: 270deg;"><i class="fas fa-robot"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ==================== SKILLS SECTION ==================== -->
-<section id="skills" class="skills">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag"><i class="fas fa-code"></i> What I use</span>
-      <h2 class="section-title">Skills & Tools</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card" data-color="blue">
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper blue">
-            <i class="fab fa-python"></i>
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-code"></i> What I use</span>
+          <h2 class="section-title">Skills & Tools</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card" data-color="blue">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrapper blue">
+                <i class="fab fa-python"></i>
+              </div>
+              <h3>Python</h3>
+            </div>
+            <p class="skill-description">Data analysis, automation, and ML model development</p>
+            <div class="skill-tags">
+              <span>Pandas</span>
+              <span>NumPy</span>
+              <span>Matplotlib</span>
+              <span>Seaborn</span>
+              <span>Plotly</span>
+              <span>Scikit-learn</span>
+              <span>Streamlit</span>
+            </div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="92"></div>
+            </div>
           </div>
-          <h3>Python</h3>
-        </div>
-        <p class="skill-description">Data analysis, automation, and ML model development</p>
-        <div class="skill-tags">
-          <span>Pandas</span>
-          <span>NumPy</span>
-          <span>Matplotlib</span>
-          <span>Seaborn</span>
-          <span>Plotly</span>
-          <span>Scikit-learn</span>
-          <span>Streamlit</span>
-        </div>
-        <div class="skill-level">
-          <div class="skill-level-bar" data-width="92"></div>
-        </div>
-      </div>
 
-      <div class="skill-card" data-color="green">
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper green">
-            <i class="fas fa-database"></i>
+          <div class="skill-card" data-color="green">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrapper green">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3>SQL</h3>
+            </div>
+            <p class="skill-description">Database design, complex queries, and data pipelines</p>
+            <div class="skill-tags">
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+              <span>SQL Server</span>
+              <span>CTEs</span>
+              <span>Window Functions</span>
+              <span>Stored Procedures</span>
+            </div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="88"></div>
+            </div>
           </div>
-          <h3>SQL</h3>
-        </div>
-        <p class="skill-description">Database design, complex queries, and data pipelines</p>
-        <div class="skill-tags">
-          <span>PostgreSQL</span>
-          <span>MySQL</span>
-          <span>SQL Server</span>
-          <span>CTEs</span>
-          <span>Window Functions</span>
-          <span>Stored Procedures</span>
-        </div>
-        <div class="skill-level">
-          <div class="skill-level-bar" data-width="88"></div>
-        </div>
-      </div>
 
-      <div class="skill-card" data-color="amber">
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper amber">
-            <i class="fas fa-chart-bar"></i>
+          <div class="skill-card" data-color="amber">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrapper amber">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h3>Power BI</h3>
+            </div>
+            <p class="skill-description">Interactive dashboards, data modeling, and business intelligence</p>
+            <div class="skill-tags">
+              <span>DAX</span>
+              <span>Power Query</span>
+              <span>Data Modeling</span>
+              <span>Interactive Dashboards</span>
+              <span>Report Design</span>
+            </div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="85"></div>
+            </div>
           </div>
-          <h3>Power BI</h3>
-        </div>
-        <p class="skill-description">Interactive dashboards, data modeling, and business intelligence</p>
-        <div class="skill-tags">
-          <span>DAX</span>
-          <span>Power Query</span>
-          <span>Data Modeling</span>
-          <span>Interactive Dashboards</span>
-          <span>Report Design</span>
-        </div>
-        <div class="skill-level">
-          <div class="skill-level-bar" data-width="85"></div>
-        </div>
-      </div>
 
-      <div class="skill-card" data-color="purple">
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper purple">
-            <i class="fas fa-robot"></i>
+          <div class="skill-card" data-color="purple">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrapper purple">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>AI / ML</h3>
+            </div>
+            <p class="skill-description">Deep learning, NLP, computer vision, and LLM applications</p>
+            <div class="skill-tags">
+              <span>TensorFlow</span>
+              <span>PyTorch</span>
+              <span>NLP</span>
+              <span>Computer Vision</span>
+              <span>LLMs</span>
+              <span>HuggingFace</span>
+              <span>LangChain</span>
+            </div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="90"></div>
+            </div>
           </div>
-          <h3>AI / ML</h3>
-        </div>
-        <p class="skill-description">Deep learning, NLP, computer vision, and LLM applications</p>
-        <div class="skill-tags">
-          <span>TensorFlow</span>
-          <span>PyTorch</span>
-          <span>NLP</span>
-          <span>Computer Vision</span>
-          <span>LLMs</span>
-          <span>HuggingFace</span>
-          <span>LangChain</span>
-        </div>
-        <div class="skill-level">
-          <div class="skill-level-bar" data-width="90"></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
 
-</main>
+  <!-- ==================== DOCMIND JS (SAFER) ==================== -->
+  <script>
+  (function () {
+    var MAX_FILES  = 5;
+    var SPACE_ROOT = 'https://ryanfafa-docmind-ai.hf.space';
 
-<!-- ==================== DOCMIND JS ==================== -->
-<script>
-(function () {
-  var MAX_FILES  = 5;
-  var SPACE_ROOT = 'https://ryanfafa-docmind-ai.hf.space';
+    var API_CANDIDATES = [
+      SPACE_ROOT + '/api',
+      SPACE_ROOT + '/_stcore/proxy/7861',
+      SPACE_ROOT + '/proxy/7861',
+      SPACE_ROOT
+    ];
 
-  var API_CANDIDATES = [
-    SPACE_ROOT + '/api',
-    SPACE_ROOT + '/_stcore/proxy/7861',
-    SPACE_ROOT + '/proxy/7861',
-    SPACE_ROOT
-  ];
+    var API_BASE = null;
 
-  var API_BASE = null;
+    // ── State ─────────────────────────────────────────────────────────────
+    var documents     = []; // [{name, file_type, chunks}]
+    var totalChunks   = 0;
+    var isThinking    = false;
+    var isUploading   = false;
 
-  // ── State ─────────────────────────────────────────────────────────────
-  var documents     = []; // [{name, file_type, chunks}]
-  var totalChunks   = 0;
-  var isThinking    = false;
-  var isUploading   = false;
+    // ── Elements ──────────────────────────────────────────────────────────
+    var fileInput    = document.getElementById('dmFileInput');
+    var uploadZone   = document.getElementById('dmUploadZone');
+    var uploadTitle  = document.getElementById('dmUploadTitle');
+    var uploadSub    = document.getElementById('dmUploadSub');
+    var maxReached   = document.getElementById('dmMaxReached');
+    var docList      = document.getElementById('dmDocList');
+    var docItems     = document.getElementById('dmDocItems');
+    var docCount     = document.getElementById('dmDocCount');
+    var docTotal     = document.getElementById('dmDocTotal');
+    var clearAllBtn  = document.getElementById('dmClearAll');
+    var statusDot    = document.querySelector('.dm-status-dot');
+    var statusText   = document.querySelector('.dm-status-text');
+    var messagesEl   = document.getElementById('dmMessages');
+    var input        = document.getElementById('dmInput');
+    var sendBtn      = document.getElementById('dmSendBtn');
+    var thinking     = document.getElementById('dmThinking');
+    var chatSub      = document.getElementById('dmChatSub');
+    var sampleBtns   = document.querySelectorAll('.dm-sample-btn');
 
-  // ── Elements ──────────────────────────────────────────────────────────
-  var fileInput    = document.getElementById('dmFileInput');
-  var uploadZone   = document.getElementById('dmUploadZone');
-  var uploadTitle  = document.getElementById('dmUploadTitle');
-  var uploadSub    = document.getElementById('dmUploadSub');
-  var maxReached   = document.getElementById('dmMaxReached');
-  var docList      = document.getElementById('dmDocList');
-  var docItems     = document.getElementById('dmDocItems');
-  var docCount     = document.getElementById('dmDocCount');
-  var docTotal     = document.getElementById('dmDocTotal');
-  var clearAllBtn  = document.getElementById('dmClearAll');
-  var statusDot    = document.querySelector('.dm-status-dot');
-  var statusText   = document.querySelector('.dm-status-text');
-  var messagesEl   = document.getElementById('dmMessages');
-  var input        = document.getElementById('dmInput');
-  var sendBtn      = document.getElementById('dmSendBtn');
-  var thinking     = document.getElementById('dmThinking');
-  var chatSub      = document.getElementById('dmChatSub');
-  var sampleBtns   = document.querySelectorAll('.dm-sample-btn');
+    // ── File type metadata ────────────────────────────────────────────────
+    var TYPE_MAP = {
+      '.pdf':  { cls: 'pdf',   icon: 'fa-file-pdf',   label: 'PDF' },
+      '.txt':  { cls: 'text',  icon: 'fa-file-lines', label: 'TXT' },
+      '.docx': { cls: 'docx',  icon: 'fa-file-word',  label: 'DOCX' },
+      '.doc':  { cls: 'docx',  icon: 'fa-file-word',  label: 'DOC' },
+      '.csv':  { cls: 'csv',   icon: 'fa-file-csv',   label: 'CSV' },
+      '.xlsx': { cls: 'excel', icon: 'fa-file-excel', label: 'XLSX' },
+      '.xls':  { cls: 'excel', icon: 'fa-file-excel', label: 'XLS' },
+      '.jpg':  { cls: 'image', icon: 'fa-file-image', label: 'IMG' },
+      '.jpeg': { cls: 'image', icon: 'fa-file-image', label: 'IMG' },
+      '.png':  { cls: 'image', icon: 'fa-file-image', label: 'IMG' },
+      '.webp': { cls: 'image', icon: 'fa-file-image', label: 'IMG' }
+    };
 
-  // ── File type metadata ────────────────────────────────────────────────
-  var TYPE_MAP = {
-    '.pdf':  { cls: 'pdf',   icon: 'fa-file-pdf',   label: 'PDF' },
-    '.txt':  { cls: 'text',  icon: 'fa-file-alt',   label: 'TXT' },
-    '.docx': { cls: 'docx',  icon: 'fa-file-word',  label: 'DOCX' },
-    '.doc':  { cls: 'docx',  icon: 'fa-file-word',  label: 'DOC' },
-    '.csv':  { cls: 'csv',   icon: 'fa-file-csv',   label: 'CSV' },
-    '.xlsx': { cls: 'excel', icon: 'fa-file-excel', label: 'XLSX' },
-    '.xls':  { cls: 'excel', icon: 'fa-file-excel', label: 'XLS' },
-    '.jpg':  { cls: 'image', icon: 'fa-file-image', label: 'IMG' },
-    '.jpeg': { cls: 'image', icon: 'fa-file-image', label: 'IMG' },
-    '.png':  { cls: 'image', icon: 'fa-file-image', label: 'IMG' },
-    '.webp': { cls: 'image', icon: 'fa-file-image', label: 'IMG' }
-  };
+    function getTypeInfo(filename) {
+      var ext = (filename.match(/\.[^.]+$/) || [''])[0].toLowerCase();
+      return TYPE_MAP[ext] || { cls: 'text', icon: 'fa-file', label: ext.replace('.', '').toUpperCase() };
+    }
 
-  function getTypeInfo(filename) {
-    var ext = (filename.match(/\.[^.]+$/) || [''])[0].toLowerCase();
-    return TYPE_MAP[ext] || { cls: 'text', icon: 'fa-file', label: ext.replace('.', '').toUpperCase() };
-  }
+    // ── Helpers ───────────────────────────────────────────────────────────
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
 
-  // ── Helpers ───────────────────────────────────────────────────────────
-  function setStatus(state, text) {
-    statusDot.className = 'dm-status-dot ' + state;
-    statusText.textContent = text;
-  }
+    function setStatus(state, text) {
+      statusDot.className = 'dm-status-dot ' + state;
+      statusText.textContent = text;
+    }
 
-  function docLoaded() { return documents.length > 0; }
+    function docLoaded() { return documents.length > 0; }
 
-  function setThinking(active) {
-    isThinking = active;
-    thinking.classList.toggle('active', active);
-    sendBtn.disabled = active || !docLoaded();
-    input.disabled   = active || !docLoaded();
-    chatSub.textContent = active
-      ? 'Thinking...'
-      : (docLoaded() ? 'Documents loaded \u00b7 Ask anything' : 'Ready to analyze your documents');
-  }
+    function setThinking(active) {
+      isThinking = active;
+      thinking.classList.toggle('active', active);
+      sendBtn.disabled = active || !docLoaded();
+      input.disabled   = active || !docLoaded();
+      chatSub.textContent = active
+        ? 'Thinking...'
+        : (docLoaded() ? 'Documents loaded · Ask anything' : 'Ready to analyze your documents');
+    }
 
-  function addMessage(role, content, sources) {
-    sources = sources || [];
-    var isAI    = role === 'ai';
-    var isError = role === 'error';
-    var time    = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    function addMessage(role, content, sources) {
+      sources = sources || [];
+      var isAI    = role === 'ai';
+      var isError = role === 'error';
+      var time    = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-    var msgEl = document.createElement('div');
-    msgEl.className = 'dm-msg dm-msg-' + (isAI || isError ? 'ai' : 'user') + (isError ? ' dm-msg-error' : '');
+      var msgEl = document.createElement('div');
+      msgEl.className = 'dm-msg dm-msg-' + (isAI || isError ? 'ai' : 'user') + (isError ? ' dm-msg-error' : '');
 
-    var avatarIcon  = isAI || isError ? 'fa-brain' : 'fa-user';
-    var authorLabel = isAI ? 'DocMind AI' : isError ? 'Error' : 'You';
+      var avatarIcon  = isAI || isError ? 'fa-brain' : 'fa-user';
+      var authorLabel = isAI ? 'DocMind AI' : isError ? 'Error' : 'You';
 
-    var sourcesHTML = '';
-    if (sources.length > 0) {
-      sourcesHTML = '<div class="dm-sources">' +
-        sources.map(function(s) { return '<span class="dm-source-pill"><i class="fas fa-file-alt"></i>' + s + '</span>'; }).join('') +
+      var sourcesHTML = '';
+      if (sources.length > 0) {
+        sourcesHTML = '<div class="dm-sources">' +
+          sources.map(function(s) {
+            return '<span class="dm-source-pill"><i class="fas fa-file-lines"></i>' + escapeHtml(s) + '</span>';
+          }).join('') +
+          '</div>';
+      }
+
+      // NOTE: We escape content so API answers cannot inject HTML.
+      msgEl.innerHTML =
+        '<div class="dm-msg-avatar"><i class="fas ' + avatarIcon + '"></i></div>' +
+        '<div class="dm-msg-content">' +
+          '<div class="dm-msg-bubble">' + (isError ? escapeHtml(content) : escapeHtml(content)) + '</div>' +
+          sourcesHTML +
+          '<div class="dm-msg-meta">' + authorLabel + ' · ' + time + '</div>' +
         '</div>';
+
+      messagesEl.appendChild(msgEl);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+      return msgEl;
     }
 
-    msgEl.innerHTML =
-      '<div class="dm-msg-avatar"><i class="fas ' + avatarIcon + '"></i></div>' +
-      '<div class="dm-msg-content">' +
-        '<div class="dm-msg-bubble">' + content + '</div>' +
-        sourcesHTML +
-        '<div class="dm-msg-meta">' + authorLabel + ' \u00b7 ' + time + '</div>' +
-      '</div>';
-
-    messagesEl.appendChild(msgEl);
-    messagesEl.scrollTop = messagesEl.scrollHeight;
-    return msgEl;
-  }
-
-  async function fetchWithTimeout(url, opts, timeoutMs) {
-    opts = opts || {};
-    timeoutMs = timeoutMs || 12000;
-    var controller = new AbortController();
-    var t = setTimeout(function() { controller.abort(); }, timeoutMs);
-    try {
-      return await fetch(url, Object.assign({}, opts, { signal: controller.signal }));
-    } finally {
-      clearTimeout(t);
-    }
-  }
-
-  async function discoverApi() {
-    if (API_BASE) return API_BASE;
-    for (var i = 0; i < API_CANDIDATES.length; i++) {
-      var base = API_CANDIDATES[i];
+    async function fetchWithTimeout(url, opts, timeoutMs) {
+      opts = opts || {};
+      timeoutMs = timeoutMs || 12000;
+      var controller = new AbortController();
+      var t = setTimeout(function() { controller.abort(); }, timeoutMs);
       try {
-        var resp = await fetchWithTimeout(base + '/health', {}, 6000);
-        if (!resp.ok) continue;
-        var data = await resp.json();
-        if (data && data.status === 'ok') {
-          API_BASE = base;
-          console.log('[DocMind] API found at', base);
-          return base;
-        }
-      } catch (e) { /* next */ }
-    }
-    return null;
-  }
-
-  // ── Render document list ──────────────────────────────────────────────
-  function renderDocList() {
-    var count = documents.length;
-
-    if (count === 0) {
-      docList.style.display    = 'none';
-      uploadZone.style.display = 'block';
-      maxReached.style.display = 'none';
-      uploadZone.classList.remove('compact');
-      uploadTitle.textContent = 'Drop your files here';
-      uploadSub.textContent   = 'Up to 5 files \u00b7 PDF, TXT, DOCX, CSV, XLSX, JPG/PNG/WEBP';
-      setStatus('idle', 'No document loaded');
-      input.disabled    = true;
-      sendBtn.disabled  = true;
-      input.placeholder = 'Upload documents first, then ask anything...';
-      chatSub.textContent = 'Ready to analyze your documents';
-      sampleBtns.forEach(function(b) { b.disabled = true; });
-      return;
+        return await fetch(url, Object.assign({}, opts, { signal: controller.signal }));
+      } finally {
+        clearTimeout(t);
+      }
     }
 
-    docList.style.display = 'block';
-    docCount.textContent  = count + ' / ' + MAX_FILES;
-    docTotal.textContent  = '\u2713 ' + totalChunks + ' total chunks indexed';
-
-    docItems.innerHTML = '';
-    documents.forEach(function(doc) {
-      var info = getTypeInfo(doc.name);
-      var item = document.createElement('div');
-      item.className = 'dm-doc-item';
-      item.innerHTML =
-        '<div class="dm-doc-item-icon ' + info.cls + '"><i class="fas ' + info.icon + '"></i></div>' +
-        '<div class="dm-doc-item-details">' +
-          '<span class="dm-doc-item-name" title="' + doc.name + '">' + doc.name + '</span>' +
-          '<span class="dm-doc-item-meta">' +
-            '<span class="dm-doc-item-badge ' + info.cls + '">' + info.label + '</span>' +
-            doc.chunks + ' chunks' +
-          '</span>' +
-        '</div>' +
-        '<button class="dm-doc-item-remove" title="Remove ' + doc.name + '">' +
-          '<i class="fas fa-times"></i>' +
-        '</button>';
-
-      var removeBtn = item.querySelector('.dm-doc-item-remove');
-      removeBtn.addEventListener('click', function() { removeDocument(doc.name); });
-
-      docItems.appendChild(item);
-    });
-
-    if (count >= MAX_FILES) {
-      uploadZone.style.display = 'none';
-      maxReached.style.display = 'flex';
-    } else {
-      uploadZone.style.display = 'block';
-      maxReached.style.display = 'none';
-      uploadZone.classList.add('compact');
-      var remaining = MAX_FILES - count;
-      uploadTitle.textContent = 'Add more files';
-      uploadSub.textContent   = remaining + ' slot' + (remaining > 1 ? 's' : '') + ' remaining \u00b7 Drop or browse';
+    async function discoverApi() {
+      if (API_BASE) return API_BASE;
+      for (var i = 0; i < API_CANDIDATES.length; i++) {
+        var base = API_CANDIDATES[i];
+        try {
+          var resp = await fetchWithTimeout(base + '/health', {}, 6000);
+          if (!resp.ok) continue;
+          var data = await resp.json();
+          if (data && data.status === 'ok') {
+            API_BASE = base;
+            console.log('[DocMind] API found at', base);
+            return base;
+          }
+        } catch (e) { /* next */ }
+      }
+      return null;
     }
 
-    setStatus('ready', count + ' document' + (count > 1 ? 's' : '') + ' ready');
-    input.disabled    = false;
-    sendBtn.disabled  = false;
-    input.placeholder = 'Ask anything about your documents...';
-    chatSub.textContent = 'Documents loaded \u00b7 Ask anything';
-    sampleBtns.forEach(function(b) { b.disabled = false; });
-  }
+    // ── Render document list ──────────────────────────────────────────────
+    function renderDocList() {
+      var count = documents.length;
 
-  // ── Sync document list from API ───────────────────────────────────────
-  async function syncDocuments() {
-    if (!API_BASE) return;
-    try {
-      var resp = await fetchWithTimeout(API_BASE + '/documents', {}, 10000);
-      if (!resp.ok) return;
-      var data = await resp.json();
-      documents   = (data.documents || []).map(function(d) {
-        return { name: d.name, file_type: d.file_type, chunks: d.chunk_count };
-      });
-      totalChunks = data.total_chunks || 0;
-    } catch (e) { /* keep current state */ }
-  }
-
-  // ── Remove single document ────────────────────────────────────────────
-  async function removeDocument(filename) {
-    if (!API_BASE) return;
-    try {
-      var resp = await fetchWithTimeout(
-        API_BASE + '/documents/' + encodeURIComponent(filename),
-        { method: 'DELETE' },
-        15000
-      );
-      if (!resp.ok) {
-        addMessage('error', 'Failed to remove ' + filename + ' (HTTP ' + resp.status + ')');
+      if (count === 0) {
+        docList.style.display    = 'none';
+        uploadZone.style.display = 'block';
+        maxReached.style.display = 'none';
+        uploadZone.classList.remove('compact');
+        uploadTitle.textContent = 'Drop your files here';
+        uploadSub.textContent   = 'Up to 5 files · PDF, TXT, DOCX, CSV, XLSX, JPG/PNG/WEBP';
+        setStatus('idle', 'No document loaded');
+        input.disabled    = true;
+        sendBtn.disabled  = true;
+        input.placeholder = 'Upload documents first, then ask anything...';
+        chatSub.textContent = 'Ready to analyze your documents';
+        sampleBtns.forEach(function(b) { b.disabled = true; });
         return;
       }
-      var data = await resp.json();
-      documents = documents.filter(function(d) { return d.name !== filename; });
-      totalChunks = data.total_chunks != null ? data.total_chunks : totalChunks;
+
+      docList.style.display = 'block';
+      docCount.textContent  = count + ' / ' + MAX_FILES;
+      docTotal.textContent  = '✓ ' + totalChunks + ' total chunks indexed';
+
+      docItems.innerHTML = '';
+      documents.forEach(function(doc) {
+        var info = getTypeInfo(doc.name);
+        var item = document.createElement('div');
+        item.className = 'dm-doc-item';
+        item.innerHTML =
+          '<div class="dm-doc-item-icon ' + info.cls + '"><i class="fas ' + info.icon + '"></i></div>' +
+          '<div class="dm-doc-item-details">' +
+            '<span class="dm-doc-item-name" title="' + escapeHtml(doc.name) + '">' + escapeHtml(doc.name) + '</span>' +
+            '<span class="dm-doc-item-meta">' +
+              '<span class="dm-doc-item-badge ' + info.cls + '">' + escapeHtml(info.label) + '</span>' +
+              escapeHtml(String(doc.chunks)) + ' chunks' +
+            '</span>' +
+          '</div>' +
+          '<button class="dm-doc-item-remove" type="button" title="Remove ' + escapeHtml(doc.name) + '">' +
+            '<i class="fas fa-times"></i>' +
+          '</button>';
+
+        var removeBtn = item.querySelector('.dm-doc-item-remove');
+        removeBtn.addEventListener('click', function() { removeDocument(doc.name); });
+
+        docItems.appendChild(item);
+      });
+
+      if (count >= MAX_FILES) {
+        uploadZone.style.display = 'none';
+        maxReached.style.display = 'flex';
+      } else {
+        uploadZone.style.display = 'block';
+        maxReached.style.display = 'none';
+        uploadZone.classList.add('compact');
+        var remaining = MAX_FILES - count;
+        uploadTitle.textContent = 'Add more files';
+        uploadSub.textContent   = remaining + ' slot' + (remaining > 1 ? 's' : '') + ' remaining · Drop or browse';
+      }
+
+      setStatus('ready', count + ' document' + (count > 1 ? 's' : '') + ' ready');
+      input.disabled    = false;
+      sendBtn.disabled  = false;
+      input.placeholder = 'Ask anything about your documents...';
+      chatSub.textContent = 'Documents loaded · Ask anything';
+      sampleBtns.forEach(function(b) { b.disabled = false; });
+    }
+
+    // ── Remove single document ────────────────────────────────────────────
+    async function removeDocument(filename) {
+      if (!API_BASE) return;
+      try {
+        var resp = await fetchWithTimeout(
+          API_BASE + '/documents/' + encodeURIComponent(filename),
+          { method: 'DELETE' },
+          15000
+        );
+        if (!resp.ok) {
+          addMessage('error', 'Failed to remove ' + filename + ' (HTTP ' + resp.status + ')');
+          return;
+        }
+        var data = await resp.json();
+        documents = documents.filter(function(d) { return d.name !== filename; });
+        totalChunks = data.total_chunks != null ? data.total_chunks : totalChunks;
+
+        renderDocList();
+        addMessage('ai',
+          'Removed ' + filename + '. ' +
+          (documents.length > 0 ? (documents.length + ' file(s) remaining.') : 'Upload new files to continue.')
+        );
+      } catch (err) {
+        addMessage('error', 'Error removing file: ' + err.message);
+      }
+    }
+
+    // ── Clear all documents ───────────────────────────────────────────────
+    async function clearAll() {
+      if (API_BASE) {
+        try { await fetchWithTimeout(API_BASE + '/reset', { method: 'POST' }, 20000); } catch (e) {}
+      }
+      documents   = [];
+      totalChunks = 0;
+      API_BASE    = null;
+      renderDocList();
+      addMessage('ai', 'All documents removed. Upload new files to continue.');
+    }
+
+    // ── Upload documents (additive) ───────────────────────────────────────
+    async function uploadDocuments(fileList) {
+      if (!fileList || fileList.length === 0 || isUploading) return;
+      isUploading = true;
+
+      var remaining = MAX_FILES - documents.length;
+      if (remaining <= 0) {
+        addMessage('error', 'Maximum ' + MAX_FILES + ' files reached. Remove a file to upload more.');
+        isUploading = false;
+        return;
+      }
+
+      var files = Array.prototype.slice.call(fileList, 0, remaining);
+      if (fileList.length > remaining) {
+        addMessage('ai', 'Only uploading ' + remaining + ' of ' + fileList.length + ' files (limit is ' + MAX_FILES + ').');
+      }
+
+      setStatus('loading', 'Connecting to API...');
+
+      var base = await discoverApi();
+      if (!base) {
+        setStatus('error', 'API unreachable');
+        addMessage('error',
+          "Can't reach the DocMind API. The HuggingFace Space may be sleeping.\n\nOpen the Space to wake it up, then refresh this page."
+        );
+        renderDocList();
+        isUploading = false;
+        return;
+      }
+
+      setStatus('loading', 'Uploading & indexing...');
+
+      var uploaded   = 0;
+      var failedList = [];
+
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        setStatus('loading', 'Uploading ' + (i + 1) + '/' + files.length + ': ' + file.name);
+
+        try {
+          var formData = new FormData();
+          formData.append('file', file);
+
+          var resp = await fetchWithTimeout(base + '/upload', {
+            method: 'POST',
+            body: formData
+          }, 120000);
+
+          if (!resp.ok) {
+            var detail = 'HTTP ' + resp.status;
+            try {
+              var rt = await resp.text();
+              try { detail = JSON.parse(rt).detail || detail; } catch (e2) {
+                if (rt && rt.length < 300) detail = rt;
+              }
+            } catch (e) {}
+            failedList.push(file.name + ': ' + detail);
+            continue;
+          }
+
+          var data = await resp.json();
+          documents.push({
+            name: data.filename || file.name,
+            file_type: data.file_type || '',
+            chunks: data.chunks || 0
+          });
+          totalChunks = data.total_chunks != null ? data.total_chunks : totalChunks;
+          uploaded++;
+
+        } catch (err) {
+          failedList.push(file.name + ': ' + err.message);
+        }
+      }
+
+      if (uploaded > 0) {
+        addMessage('ai', 'Indexed ' + uploaded + ' file(s). Now ask me anything about your documents.');
+      }
+      if (failedList.length > 0) {
+        addMessage('error', 'Failed to upload:\n' + failedList.map(function(f) { return '• ' + f; }).join('\n'));
+      }
 
       renderDocList();
-      addMessage('ai', 'Removed <strong>' + filename + '</strong>.' +
-        (documents.length > 0
-          ? ' ' + documents.length + ' file(s) remaining.'
-          : ' Upload new files to continue.'));
-    } catch (err) {
-      addMessage('error', 'Error removing file: ' + err.message);
-    }
-  }
-
-  // ── Clear all documents ───────────────────────────────────────────────
-  async function clearAll() {
-    if (API_BASE) {
-      try { await fetchWithTimeout(API_BASE + '/reset', { method: 'POST' }, 20000); } catch (e) {}
-    }
-    documents   = [];
-    totalChunks = 0;
-    API_BASE    = null;
-    renderDocList();
-    addMessage('ai', 'All documents removed. Upload new files to continue.');
-  }
-
-  // ── Upload documents (additive) ───────────────────────────────────────
-  async function uploadDocuments(fileList) {
-    if (!fileList || fileList.length === 0 || isUploading) return;
-    isUploading = true;
-
-    var remaining = MAX_FILES - documents.length;
-    if (remaining <= 0) {
-      addMessage('error', 'Maximum ' + MAX_FILES + ' files reached. Remove a file to upload more.');
+      fileInput.value = '';
       isUploading = false;
-      return;
     }
 
-    var files = Array.prototype.slice.call(fileList, 0, remaining);
-    if (fileList.length > remaining) {
-      addMessage('ai', 'Only uploading ' + remaining + ' of ' + fileList.length +
-        ' files (limit is ' + MAX_FILES + ').');
-    }
+    // ── Send query ────────────────────────────────────────────────────────
+    async function sendQuery(question) {
+      if (!question.trim() || isThinking || !docLoaded()) return;
 
-    setStatus('loading', 'Connecting to API...');
+      addMessage('user', question);
+      input.value        = '';
+      input.style.height = 'auto';
+      setThinking(true);
 
-    var base = await discoverApi();
-    if (!base) {
-      setStatus('error', 'API unreachable');
-      addMessage('error',
-        'Can\'t reach the DocMind API. The HuggingFace Space may be sleeping.' +
-        '<br><br>' +
-        '<a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" rel="noopener noreferrer" style="color:#60a5fa;">Open the Space</a> to wake it up, then refresh this page.'
-      );
-      renderDocList();
-      isUploading = false;
-      return;
-    }
-
-    setStatus('loading', 'Uploading & indexing...');
-
-    var uploaded   = 0;
-    var failedList = [];
-
-    for (var i = 0; i < files.length; i++) {
-      var file = files[i];
-      setStatus('loading', 'Uploading ' + (i + 1) + '/' + files.length + ': ' + file.name);
+      var base = API_BASE;
+      if (!base) {
+        addMessage('error', 'API connection lost. Please re-upload your documents.');
+        setThinking(false);
+        return;
+      }
 
       try {
-        var formData = new FormData();
-        formData.append('file', file);
-
-        var resp = await fetchWithTimeout(base + '/upload', {
+        var resp = await fetchWithTimeout(base + '/query', {
           method: 'POST',
-          body: formData
-        }, 120000);
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: question })
+        }, 60000);
 
-        if (!resp.ok) {
-          var detail = 'HTTP ' + resp.status;
-          try {
-            var rt = await resp.text();
-            try { detail = JSON.parse(rt).detail || detail; } catch (e2) {
-              if (rt && rt.length < 300) detail = rt;
-            }
-          } catch (e) {}
-          failedList.push(file.name + ': ' + detail);
-          continue;
-        }
+        if (!resp.ok) throw new Error('Request failed: ' + resp.status);
 
         var data = await resp.json();
-        documents.push({
-          name: data.filename || file.name,
-          file_type: data.file_type || '',
-          chunks: data.chunks || 0
-        });
-        totalChunks = data.total_chunks != null ? data.total_chunks : totalChunks;
-        uploaded++;
+
+        if (data.success) {
+          addMessage('ai', data.answer, data.sources);
+        } else {
+          addMessage('error', 'Something went wrong: ' + (data.error || 'Unknown error'));
+        }
 
       } catch (err) {
-        failedList.push(file.name + ': ' + err.message);
+        addMessage('error',
+          'Connection error: ' + err.message + '.\n\nIf the Space is sleeping, open it to wake it, then refresh and try again.'
+        );
+      } finally {
+        setThinking(false);
       }
     }
 
-    if (uploaded > 0) {
-      addMessage('ai',
-        '\u2705 Indexed <strong>' + uploaded + ' file(s)</strong>.' +
-        '<br>Now ask me anything about your documents.');
-    }
-    if (failedList.length > 0) {
-      addMessage('error',
-        'Failed to upload:<br>' +
-        failedList.map(function(f) { return '\u2022 ' + f; }).join('<br>'));
-    }
+    // ── Event listeners ───────────────────────────────────────────────────
+    fileInput.addEventListener('change', function() {
+      if (fileInput.files && fileInput.files.length) uploadDocuments(fileInput.files);
+    });
 
-    renderDocList();
-    fileInput.value = '';
-    isUploading = false;
-  }
+    // Don't hijack clicks on links/buttons inside the upload zone.
+    uploadZone.addEventListener('click', function(e) {
+      if (e.target === fileInput) return;
+      if (e.target.closest('a, button')) return;
+      fileInput.click();
+    });
 
-  // ── Send query ────────────────────────────────────────────────────────
-  async function sendQuery(question) {
-    if (!question.trim() || isThinking || !docLoaded()) return;
-
-    addMessage('user', question);
-    input.value        = '';
-    input.style.height = 'auto';
-    setThinking(true);
-
-    var base = API_BASE;
-    if (!base) {
-      addMessage('error', 'API connection lost. Please re-upload your documents.');
-      setThinking(false);
-      return;
-    }
-
-    try {
-      var resp = await fetchWithTimeout(base + '/query', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: question })
-      }, 60000);
-
-      if (!resp.ok) throw new Error('Request failed: ' + resp.status);
-
-      var data = await resp.json();
-
-      if (data.success) {
-        addMessage('ai', data.answer, data.sources);
-      } else {
-        addMessage('error', 'Something went wrong: ' + (data.error || 'Unknown error'));
-      }
-
-    } catch (err) {
-      addMessage('error',
-        'Connection error: ' + err.message + '.' +
-        '<br><br>' +
-        'If the Space is sleeping, open it to wake it: ' +
-        '<a href="https://huggingface.co/spaces/Ryanfafa/docmind-ai" target="_blank" rel="noopener noreferrer" style="color:#60a5fa;">DocMind AI</a>' +
-        '<br>Then refresh and try again.'
-      );
-    } finally {
-      setThinking(false);
-    }
-  }
-
-  // ── Event listeners ───────────────────────────────────────────────────
-  fileInput.addEventListener('change', function() {
-    if (fileInput.files && fileInput.files.length) uploadDocuments(fileInput.files);
-  });
-
-  uploadZone.addEventListener('click', function(e) {
-    if (e.target === fileInput) return;
-    fileInput.click();
-  });
-  uploadZone.addEventListener('dragover', function(e) {
-    e.preventDefault();
-    uploadZone.classList.add('dragover');
-  });
-  uploadZone.addEventListener('dragleave', function() { uploadZone.classList.remove('dragover'); });
-  uploadZone.addEventListener('drop', function(e) {
-    e.preventDefault();
-    uploadZone.classList.remove('dragover');
-    if (e.dataTransfer.files && e.dataTransfer.files.length) uploadDocuments(e.dataTransfer.files);
-  });
-
-  clearAllBtn.addEventListener('click', function() { clearAll(); });
-
-  sendBtn.addEventListener('click', function() { sendQuery(input.value); });
-
-  input.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    // Make the "Browse Files" button open the picker.
+    var browseBtn = uploadZone.querySelector('.dm-upload-btn');
+    if (browseBtn) browseBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      sendQuery(input.value);
-    }
-  });
+      fileInput.click();
+    });
 
-  input.addEventListener('input', function() {
-    input.style.height = 'auto';
-    input.style.height = Math.min(input.scrollHeight, 120) + 'px';
-  });
+    uploadZone.addEventListener('dragover', function(e) {
+      e.preventDefault();
+      uploadZone.classList.add('dragover');
+    });
+    uploadZone.addEventListener('dragleave', function() { uploadZone.classList.remove('dragover'); });
+    uploadZone.addEventListener('drop', function(e) {
+      e.preventDefault();
+      uploadZone.classList.remove('dragover');
+      if (e.dataTransfer.files && e.dataTransfer.files.length) uploadDocuments(e.dataTransfer.files);
+    });
 
-  sampleBtns.forEach(function(btn) {
-    btn.disabled = true;
-    btn.addEventListener('click', function() {
-      var q = btn.getAttribute('data-q');
-      if (q && docLoaded() && !isThinking) {
-        input.value = q;
-        sendQuery(q);
+    clearAllBtn.addEventListener('click', function() { clearAll(); });
+
+    sendBtn.addEventListener('click', function() { sendQuery(input.value); });
+
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendQuery(input.value);
       }
     });
-  });
 
-  // ── Init ──────────────────────────────────────────────────────────────
-  renderDocList();
+    input.addEventListener('input', function() {
+      input.style.height = 'auto';
+      input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+    });
 
-})();
-</script>
+    sampleBtns.forEach(function(btn) {
+      btn.disabled = true;
+      btn.addEventListener('click', function() {
+        var q = btn.getAttribute('data-q');
+        if (q && docLoaded() && !isThinking) {
+          input.value = q;
+          sendQuery(q);
+        }
+      });
+    });
 
-<!-- ==================== FINGER DRAWER (hand tracking) ==================== -->
-<script type="module">
-(function() {
-  const activateBtn = document.getElementById('fdActivate');
-  const instructionsEl = document.getElementById('fdInstructions');
-  const wrapEl = document.getElementById('fdWrap');
-  const video = document.getElementById('fdVideo');
-  const canvas = document.getElementById('fdCanvas');
-  const statusEl = document.getElementById('fdStatus');
-  const clearBtn = document.getElementById('fdClear');
-  const brushSizeEl = document.getElementById('fdBrushSize');
-  
-  if (!activateBtn || !instructionsEl || !wrapEl || !video || !canvas) {
-    console.error('Finger Drawer: required elements not found');
-    return;
-  }
+    // ── Init ──────────────────────────────────────────────────────────────
+    renderDocList();
+  })();
+  </script>
 
-  const ctx = canvas.getContext('2d');
-  let handLandmarker = null;
-  let stream = null;
-  let drawColor = [34, 197, 94];
-  let brushThickness = 5;
-  let prevX = null, prevY = null;
-  let lastVideoTime = -1;
-  let rafId = null;
-  let isActive = false;
+  <!-- ==================== FINGER DRAWER (hand tracking) ==================== -->
+  <script type="module">
+  (function() {
+    const activateBtn = document.getElementById('fdActivate');
+    const instructionsEl = document.getElementById('fdInstructions');
+    const wrapEl = document.getElementById('fdWrap');
+    const video = document.getElementById('fdVideo');
+    const canvas = document.getElementById('fdCanvas');
+    const statusEl = document.getElementById('fdStatus');
+    const clearBtn = document.getElementById('fdClear');
+    const brushSizeEl = document.getElementById('fdBrushSize');
 
-  function setStatus(text) {
-    if (statusEl) statusEl.textContent = text;
-  }
-
-  function isHandOpen(landmarks) {
-    const fingers = [[8, 6], [12, 10], [16, 14], [20, 18]];
-    let openCount = 0;
-    for (const [tipId, pipId] of fingers) {
-      const tip = landmarks[tipId];
-      const pip = landmarks[pipId];
-      if (tip.y < pip.y) openCount++;
-    }
-    return openCount >= 3;
-  }
-
-  function drawFrame() {
-    if (!isActive || !handLandmarker || video.readyState < 2) {
-      if (isActive) rafId = requestAnimationFrame(drawFrame);
+    if (!activateBtn || !instructionsEl || !wrapEl || !video || !canvas) {
+      console.error('Finger Drawer: required elements not found');
       return;
     }
-    const now = performance.now();
-    if (lastVideoTime !== video.currentTime) {
-      lastVideoTime = video.currentTime;
-      try {
-        const results = handLandmarker.detectForVideo(video, now);
-        if (results.landmarks && results.landmarks.length > 0) {
-          const landmarks = results.landmarks[0];
-          const open = isHandOpen(landmarks);
-          const w = canvas.width;
-          const h = canvas.height;
-          const x = Math.round(landmarks[8].x * w);
-          const y = Math.round(landmarks[8].y * h);
-          if (open) {
-            setStatus('Drawing');
-            if (prevX != null && prevY != null) {
-              ctx.strokeStyle = 'rgb(' + drawColor[0] + ',' + drawColor[1] + ',' + drawColor[2] + ')';
-              ctx.lineWidth = brushThickness;
-              ctx.lineCap = 'round';
-              ctx.beginPath();
-              ctx.moveTo(prevX, prevY);
-              ctx.lineTo(x, y);
-              ctx.stroke();
+
+    const ctx = canvas.getContext('2d');
+    let handLandmarker = null;
+    let stream = null;
+    let drawColor = [34, 197, 94];
+    let brushThickness = 5;
+    let prevX = null, prevY = null;
+    let lastVideoTime = -1;
+    let rafId = null;
+    let isActive = false;
+
+    function setStatus(text) {
+      if (statusEl) statusEl.textContent = text;
+    }
+
+    function isHandOpen(landmarks) {
+      const fingers = [[8, 6], [12, 10], [16, 14], [20, 18]];
+      let openCount = 0;
+      for (const [tipId, pipId] of fingers) {
+        const tip = landmarks[tipId];
+        const pip = landmarks[pipId];
+        if (tip.y < pip.y) openCount++;
+      }
+      return openCount >= 3;
+    }
+
+    function drawFrame() {
+      if (!isActive || !handLandmarker || video.readyState < 2) {
+        if (isActive) rafId = requestAnimationFrame(drawFrame);
+        return;
+      }
+      const now = performance.now();
+      if (lastVideoTime !== video.currentTime) {
+        lastVideoTime = video.currentTime;
+        try {
+          const results = handLandmarker.detectForVideo(video, now);
+          if (results.landmarks && results.landmarks.length > 0) {
+            const landmarks = results.landmarks[0];
+            const open = isHandOpen(landmarks);
+            const w = canvas.width;
+            const h = canvas.height;
+            const x = Math.round(landmarks[8].x * w);
+            const y = Math.round(landmarks[8].y * h);
+            if (open) {
+              setStatus('Drawing');
+              if (prevX != null && prevY != null) {
+                ctx.strokeStyle = 'rgb(' + drawColor[0] + ',' + drawColor[1] + ',' + drawColor[2] + ')';
+                ctx.lineWidth = brushThickness;
+                ctx.lineCap = 'round';
+                ctx.beginPath();
+                ctx.moveTo(prevX, prevY);
+                ctx.lineTo(x, y);
+                ctx.stroke();
+              }
+              prevX = x;
+              prevY = y;
+            } else {
+              setStatus('Fist to stop');
+              prevX = null;
+              prevY = null;
             }
-            prevX = x;
-            prevY = y;
           } else {
-            setStatus('Fist to stop');
+            setStatus('Show your hand');
             prevX = null;
             prevY = null;
           }
-        } else {
-          setStatus('Show your hand');
-          prevX = null;
-          prevY = null;
-        }
-      } catch (e) {}
+        } catch (e) {}
+      }
+      rafId = requestAnimationFrame(drawFrame);
     }
-    rafId = requestAnimationFrame(drawFrame);
-  }
 
-  // Activate button click handler
-  activateBtn.addEventListener('click', async function() {
-    activateBtn.disabled = true;
-    activateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Loading...</span>';
-    
-    // Hide instructions, show drawing interface
-    instructionsEl.style.display = 'none';
-    wrapEl.style.display = 'block';
-    
-    await init();
-  });
+    activateBtn.addEventListener('click', async function() {
+      activateBtn.disabled = true;
+      activateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Loading...</span>';
 
-  // Clear button
-  clearBtn.addEventListener('click', function() {
-    if (!ctx) return;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    setStatus('Cleared');
-  });
+      instructionsEl.style.display = 'none';
+      wrapEl.style.display = 'block';
 
-  // Color buttons
-  document.querySelectorAll('.fd-color').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.fd-color').forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      const c = btn.getAttribute('data-color');
-      if (c === 'r') drawColor = [239, 68, 68];
-      else if (c === 'g') drawColor = [34, 197, 94];
-      else if (c === 'b') drawColor = [59, 130, 246];
+      await init();
     });
-  });
-  document.querySelector('.fd-color[data-color="g"]').classList.add('active');
 
-  // Brush size buttons
-  document.querySelectorAll('.fd-size').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      const dir = btn.getAttribute('data-dir');
-      if (dir === '+') brushThickness = Math.min(30, brushThickness + 2);
-      else brushThickness = Math.max(1, brushThickness - 2);
-      if (brushSizeEl) brushSizeEl.textContent = brushThickness;
+    clearBtn.addEventListener('click', function() {
+      if (!ctx) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      setStatus('Cleared');
     });
-  });
 
-  async function init() {
-    isActive = true;
-    setStatus('Loading model…');
-    try {
-      const { HandLandmarker, FilesetResolver } = await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/vision_bundle.mjs');
-      const vision = await FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm');
-      handLandmarker = await HandLandmarker.createFromOptions(vision, {
-        baseOptions: { modelAssetPath: 'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task' },
-        numHands: 1,
-        runningMode: 'VIDEO'
+    document.querySelectorAll('.fd-color').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.fd-color').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        const c = btn.getAttribute('data-color');
+        if (c === 'r') drawColor = [239, 68, 68];
+        else if (c === 'g') drawColor = [34, 197, 94];
+        else if (c === 'b') drawColor = [59, 130, 246];
       });
-    } catch (e) {
-      setStatus('Model load failed');
-      console.error('Finger Drawer: Error loading MediaPipe:', e);
-      activateBtn.disabled = false;
-      activateBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> <span>Retry</span>';
-      return;
+    });
+    const greenBtn = document.querySelector('.fd-color[data-color="g"]');
+    if (greenBtn) greenBtn.classList.add('active');
+
+    document.querySelectorAll('.fd-size').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const dir = btn.getAttribute('data-dir');
+        if (dir === '+') brushThickness = Math.min(30, brushThickness + 2);
+        else brushThickness = Math.max(1, brushThickness - 2);
+        if (brushSizeEl) brushSizeEl.textContent = brushThickness;
+      });
+    });
+
+    async function init() {
+      isActive = true;
+      setStatus('Loading model…');
+      try {
+        const { HandLandmarker, FilesetResolver } = await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/vision_bundle.mjs');
+        const vision = await FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm');
+        handLandmarker = await HandLandmarker.createFromOptions(vision, {
+          baseOptions: { modelAssetPath: 'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task' },
+          numHands: 1,
+          runningMode: 'VIDEO'
+        });
+      } catch (e) {
+        setStatus('Model load failed');
+        console.error('Finger Drawer: Error loading MediaPipe:', e);
+        activateBtn.disabled = false;
+        activateBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> <span>Retry</span>';
+        return;
+      }
+
+      setStatus('Requesting camera access…');
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user', width: 640, height: 480 } });
+        video.srcObject = stream;
+        await video.play();
+      } catch (e) {
+        setStatus('Camera access denied');
+        console.error('Finger Drawer: Camera error:', e);
+        activateBtn.disabled = false;
+        activateBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> <span>Retry</span>';
+        return;
+      }
+
+      const resize = function() {
+        const wrap = video.parentElement;
+        const w = wrap.clientWidth;
+        const h = wrap.clientHeight;
+        canvas.width = w;
+        canvas.height = h;
+        video.width = w;
+        video.height = h;
+      };
+      video.addEventListener('loadedmetadata', resize);
+      resize();
+
+      setStatus('Open hand to draw');
+      lastVideoTime = -1;
+      drawFrame();
     }
-    setStatus('Requesting camera access…');
-    try {
-      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user', width: 640, height: 480 } });
-      video.srcObject = stream;
-      await video.play();
-    } catch (e) {
-      setStatus('Camera access denied');
-      console.error('Finger Drawer: Camera error:', e);
-      activateBtn.disabled = false;
-      activateBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> <span>Retry</span>';
-      return;
-    }
-    const resize = function() {
-      const wrap = video.parentElement;
-      const w = wrap.clientWidth;
-      const h = wrap.clientHeight;
-      canvas.width = w;
-      canvas.height = h;
-      video.width = w;
-      video.height = h;
-    };
-    video.addEventListener('loadedmetadata', resize);
-    resize();
-    setStatus('Open hand to draw');
-    lastVideoTime = -1;
-    drawFrame();
-  }
 
-  window.addEventListener('beforeunload', function() {
-    if (rafId) cancelAnimationFrame(rafId);
-    if (stream) stream.getTracks().forEach(function(t) { t.stop(); });
-  });
-})();
-</script>
+    window.addEventListener('beforeunload', function() {
+      if (rafId) cancelAnimationFrame(rafId);
+      if (stream) stream.getTracks().forEach(function(t) { t.stop(); });
+    });
+  })();
+  </script>
 
-<!-- ==================== CONTACT SECTION ==================== -->
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag light"><i class="fas fa-paper-plane"></i> Get in touch</span>
-      <h2 class="section-title light">Let's Work Together</h2>
-      <p class="section-subtitle">
-        I'm currently open to new opportunities. Whether you have a project
-        in mind, a question, or just want to connect — my inbox is always open.
-      </p>
-    </div>
-    <div class="contact-grid">
-      <a href="mailto:Ryan.farahani97@gmail.com" class="contact-card">
-        <div class="contact-icon-wrapper">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <h3>Email</h3>
-        <p>Ryan.farahani97@gmail.com</p>
-        <span class="contact-action">Send a message <i class="fas fa-arrow-right"></i></span>
-      </a>
-      <a href="https://linkedin.com/in/rayanfarahani" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <div class="contact-icon-wrapper linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </div>
-        <h3>LinkedIn</h3>
-        <p>rayanfarahani</p>
-        <span class="contact-action">Connect with me <i class="fas fa-arrow-right"></i></span>
-      </a>
-      <a href="https://github.com/RayanFarahani" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <div class="contact-icon-wrapper github">
-          <i class="fab fa-github"></i>
-        </div>
-        <h3>GitHub</h3>
-        <p>RayanFarahani</p>
-        <span class="contact-action">View my repos <i class="fas fa-arrow-right"></i></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <span class="logo-bracket">&lt;</span>Rayan<span class="logo-bracket">/&gt;</span>
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag light"><i class="fas fa-paper-plane"></i> Get in touch</span>
+        <h2 class="section-title light">Let's Work Together</h2>
+        <p class="section-subtitle">
+          I'm currently open to new opportunities. Whether you have a project
+          in mind, a question, or just want to connect — my inbox is always open.
+        </p>
       </div>
-      <p class="footer-text">Designed & built by Rayan Farahani &copy; 2025</p>
-      <div class="footer-social">
-        <a href="https://linkedin.com/in/rayanfarahani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/RayanFarahani" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="mailto:Ryan.farahani97@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <div class="contact-grid">
+        <a href="mailto:Ryan.farahani97@gmail.com" class="contact-card">
+          <div class="contact-icon-wrapper">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p>Ryan.farahani97@gmail.com</p>
+          <span class="contact-action">Send a message <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://linkedin.com/in/rayanfarahani" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon-wrapper linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>rayanfarahani</p>
+          <span class="contact-action">Connect with me <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://github.com/RayanFarahani" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon-wrapper github">
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>GitHub</h3>
+          <p>RayanFarahani</p>
+          <span class="contact-action">View my repos <i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- ==================== BACK TO TOP ==================== -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Rayan<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-text">Designed & built by Rayan Farahani &copy; 2025</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/rayanfarahani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/RayanFarahani" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:Ryan.farahani97@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <!-- ==================== BACK TO TOP ==================== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
